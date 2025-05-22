@@ -257,7 +257,7 @@ export default function EventsPage() {
                   <div className="flex flex-row items-center mt-4">
                     <div className="mr-3">
                       <Image
-                        src="Event/MoneyWavy (1).png"
+                        src="/Event/MoneyWavy.png"
                         alt="Money Icon"
                         width={22}
                         height={22}
@@ -432,7 +432,7 @@ export default function EventsPage() {
                 <div className="flex flex-row items-center mt-4 text-black">
                   <div className="mr-3">
                     <Image
-                      src="Event/MoneyWavy (1).png"
+                      src="/Event/MoneyWavy.png"
                       alt="Money Icon"
                       width={22}
                       height={22}

@@ -17,7 +17,7 @@ export default function PodcastPage() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="podcast/Screen.png"
+            src="/podcast/Screen.png"
             alt="internship hero"
             width={1200} // Increased for better resolution
             height={1260}
@@ -333,22 +333,22 @@ export default function PodcastPage() {
             {[
               {
                 title: "Jesse Heathcote",
-                image: "podcast/Ellipse 4 (1).png",
+                image: "/podcast/Ellipse 4 (1).png",
                 desc: "lorem ipsum lorem ipsum",
               },
               {
                 title: "Ernest Schmeler",
-                image: "podcast/Ellipse 4 (2).png",
+                image: "/podcast/Ellipse 4 (2).png",
                 desc: "lorem ipsum lorem ipsum",
               },
               {
                 title: "Ernest Schmeler",
-                image: "podcast/Ellipse 4 (3).png",
+                image: "/podcast/Ellipse 4 (3).png",
                 desc: "lorem ipsum lorem ipsum",
               },
               {
                 title: "Ted Bruen",
-                image: "podcast/Ellipse 4 (4).png",
+                image: "/podcast/Ellipse 4 (4).png",
                 desc: "lorem ipsum lorem ipsum",
               },
             ].map((item, i) => (
