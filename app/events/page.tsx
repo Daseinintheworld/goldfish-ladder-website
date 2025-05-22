@@ -10,7 +10,7 @@ export default function EventsPage() {
       {/* Hero Section */}
       <section>
         <motion.div
-          className="max-w-[1047px] rounded-2xl px-2 md:px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px] mx-[30px]"
+          className="max-w-[1047px] rounded-2xl px-2 md:px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px] sm:mx-[30px]"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -274,7 +274,7 @@ export default function EventsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-[#FFB32C] px-10 py-20 text-white max-w-[1047px] rounded-xl mt-24 md:px-12">
+      <section className="bg-primary py-20 text-white max-w-[1047px] rounded-xl mt-24 md:px-12">
         <motion.div
           className="flex flex-col w-full w-max-[1047px]"
           initial={{ opacity: 0, y: 50 }}

@@ -29,13 +29,13 @@ export default function PodcastPage() {
       {/* Voices of Young Founders */}
       <section>
         <motion.div
-          className="max-w-[1047px] rounded-2xl px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px] mx-[50px]"
+          className="max-w-[1047px] rounded-2xl px-6 md:px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px] sm:mx-[50px] mx-2"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex flex-col items-center gap-10">
+          <div className="flex flex-col items-center md:gap-10">
             <motion.div
               className="w-full max-w-[750px]"
               initial={{ opacity: 0, x: -50 }}
@@ -43,7 +43,7 @@ export default function PodcastPage() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-[70px] font-bold text-white text-center leading-tight">
+              <h1 className="text-4xl md:text-[70px] font-bold text-white text-center leading-tight">
                 “Voices of Young Founders”
               </h1>
             </motion.div>
@@ -55,7 +55,7 @@ export default function PodcastPage() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <p className="text-[26px] font-semibold text-white text-center leading-tight">
+              <p className="tex-lg md:text-2xl font-semibold text-white text-center leading-tight">
                 Tune into candid conversations with high school and college
                 founders as they share the ups, downs, and unexpected lessons
                 from launching their first startups—with a little help from AI
@@ -74,7 +74,7 @@ export default function PodcastPage() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="mt-[80px] mb-4 text-3xl font-bold">
+          <h2 className="mt-[80px] text-center mb-4 text-3xl font-bold">
             Gain startup experience
           </h2>
           <p className="mb-8 text-2xl max-w-[600px] text-center">
@@ -83,7 +83,7 @@ export default function PodcastPage() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 gap-12 md:grid-cols-2 w-full max-w-5xl mx-auto px-4"
+          className="grid grid-cols-1 gap-12 md:grid-cols-2 w-full max-w-5xl mx-auto sm:px-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -106,7 +106,7 @@ export default function PodcastPage() {
           ].map((item, i) => (
             <motion.div
               key={i}
-              className="flex flex-col min-w-[380px] max-w-xs mx-auto shadow-md pb-[20px] rounded-lg mt-[50px] bg-[#FEB22C]"
+              className="flex flex-col min-w-[320px] md:min-w-[380px] max-w-xs mx-auto shadow-md pb-[20px] rounded-lg mt-[50px] bg-[#FEB22C]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -305,8 +305,8 @@ export default function PodcastPage() {
         </motion.div>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-[#FFB32C] py-20 text-white w-max-[1047px] rounded-xl mt-[100px] p-[50px] mb-[100px] mx-[50px]">
+      {/* Popular Speakers */}
+      <section className="bg-[#FFB32C] py-20 text-white w-max-[1047px] rounded-xl mt-[100px] md:p-[50px] mb-[100px] mx-2 md:mx-12">
         <motion.div
           className="flex flex-col text-center w-full w-max-[1047px]"
           initial={{ opacity: 0, y: 50 }}
@@ -354,7 +354,7 @@ export default function PodcastPage() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                className="flex flex-col w-full max-w-[220px] min-w-[200px] mx-auto shadow-md pb-6 rounded-lg mt-8 mr-2 ml-2"
+                className="flex flex-col w-full max-w-[280px] min-w-[200px] mx-auto shadow-md pb-6 rounded-lg mt-8 mr-2 ml-2"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}

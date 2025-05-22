@@ -67,7 +67,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white shadow-lg rounded-lg mt-2 p-4">
+          <div className="lg:hidden bg-white rounded-lg mt-2 p-4">
             <div className="space-y-4">
               {navLinks.map((link) => (
                 <Link

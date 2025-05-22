@@ -132,7 +132,7 @@ const Podcast = () => {
       className="px-4 md:px-6 mt-20 md:mt-40 flex flex-col justify-center items-center"
     >
       <FadeInSection>
-        <div className="lg:max-w-5xl  md:max-w-3xl sm:max-w-[320px] max-w-xl md:mx-[30px] mt-16 md:mt-[272px] px-4 md:px-12 py-7 rounded-2xl bg-[#fff1db]">
+        <div className="lg:max-w-5xl  md:max-w-3xl max-w-[320px] md:mx-[30px] mt-16 md:mt-[272px] md:px-12 py-7 rounded-2xl bg-[#fff1db]">
           <div className="mb-12">
             <motion.h2
               className="text-4xl md:text-6xl font-bold mb-4 md:mb-7 text-center lg:text-left"
