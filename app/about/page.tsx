@@ -89,7 +89,7 @@ export default function AboutPage() {
                   transition={{ duration: 0.8, delay: i * 0.2 }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="relative h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 overflow-hidden rounded-full border self-center">
+                  <div className="relative h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 overflow-hidden rounded-full self-center">
                     <Image
                       src={`/about/about_people_0${i}.png`}
                       alt={`Team member ${i}`}
