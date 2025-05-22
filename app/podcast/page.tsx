@@ -92,17 +92,17 @@ export default function PodcastPage() {
           {[
             {
               title: "Hear cutting-edge concepts",
-              image: "/Event/Rectangle 35.png",
+              image: "/events/Rectangle 35.png",
             },
             {
               title: "Meet entrepreneurs and peers",
-              image: "/Event/Rectangle 35.png",
+              image: "/events/Rectangle 35.png",
             },
             {
               title: "Stay up-to-date on trends",
-              image: "/Event/Rectangle 35.png",
+              image: "/events/Rectangle 35.png",
             },
-            { title: "Make Progress", image: "/Event/Rectangle 35.png" },
+            { title: "Make Progress", image: "/events/Rectangle 35.png" },
           ].map((item, i) => (
             <motion.div
               key={i}
