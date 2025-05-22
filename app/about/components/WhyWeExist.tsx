@@ -38,7 +38,7 @@ const WhyWeExist = () => {
 
               <div className="space-y-6">
                 <motion.div
-                  className="bg-[#FDBA3C] text-black rounded-xl px-6 py-4 text-sm sm:text-base font-medium mx-auto md:mx-0 md:-translate-x-4 max-w-md"
+                  className="bg-primary-text text-black rounded-xl px-6 py-4 text-sm sm:text-base font-medium mx-auto md:mx-0 md:-translate-x-4 max-w-md"
                   whileHover={{ scale: 1.05 }}
                 >
                   “I went from idea to launch, and learned so much along the
