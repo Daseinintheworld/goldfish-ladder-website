@@ -69,7 +69,7 @@ export default function EventsPage() {
             {[
               {
                 title: "Pitch Night",
-                image: "/Event/Rectangle 35.png",
+                image: "/events/Rectangle 35.png",
                 desc: "Showcase your startup ideas",
                 date: "22nd April",
                 location: "New Delhi",
@@ -77,7 +77,7 @@ export default function EventsPage() {
               },
               {
                 title: "Hackathon",
-                image: "/Event/Rectangle 35.png",
+                image: "/events/Rectangle 35.png",
                 desc: "Collaborate and build solutions",
                 date: "25th April",
                 location: "Mumbai",
@@ -85,7 +85,7 @@ export default function EventsPage() {
               },
               {
                 title: "Startup Jam",
-                image: "/Event/Rectangle 35.png",
+                image: "/events/Rectangle 35.png",
                 desc: "Network with like-minded founders",
                 date: "30th April",
                 location: "Bangalore",
@@ -145,7 +145,7 @@ export default function EventsPage() {
                   <div className="flex flex-row items-center mt-4">
                     <div className="mr-3">
                       <Image
-                        src="/Event/MoneyWavy.png"
+                        src="/events/MoneyWavy.png"
                         alt="Money Icon"
                         width={22}
                         height={22}
@@ -181,7 +181,7 @@ export default function EventsPage() {
             {[
               {
                 title: "Lorem ipsum",
-                image: "/Event/Rectangle 35t.png",
+                image: "/events/Rectangle 35t.png",
                 desc: "Lorem ipsum",
                 date: "22nd April",
                 location: "New Delhi",
@@ -189,7 +189,7 @@ export default function EventsPage() {
               },
               {
                 title: "Lorem ipsum",
-                image: "/Event/Rectangle 35s.png",
+                image: "/events/Rectangle 35s.png",
                 desc: "Lorem ipsum",
                 date: "22nd April",
                 location: "New Delhi",
@@ -197,7 +197,7 @@ export default function EventsPage() {
               },
               {
                 title: "Lorem ipsum",
-                image: "/Event/Rectangle 35c.png",
+                image: "/events/Rectangle 35c.png",
                 desc: "Lorem ipsum",
                 date: "22nd April",
                 location: "New Delhi",
@@ -257,7 +257,7 @@ export default function EventsPage() {
                   <div className="flex flex-row items-center mt-4">
                     <div className="mr-3">
                       <Image
-                        src="/Event/MoneyWavy.png"
+                        src="/events/MoneyWavy.png"
                         alt="Money Icon"
                         width={22}
                         height={22}
@@ -314,7 +314,7 @@ export default function EventsPage() {
               whileTap={{ scale: 0.95 }}
             >
               <Image
-                src="/Event/tune.png"
+                src="/events/tune.png"
                 alt="tune icon"
                 width={24}
                 height={24}
@@ -334,7 +334,7 @@ export default function EventsPage() {
           {[
             {
               title: "Lorem ipsum",
-              image: "/Event/Rectangle 35t.png",
+              image: "/events/Rectangle 35t.png",
               desc: "Lorem ipsum",
               date: "22nd April",
               location: "New Delhi",
@@ -342,7 +342,7 @@ export default function EventsPage() {
             },
             {
               title: "Lorem ipsum",
-              image: "/Event/Rectangle 35s.png",
+              image: "/events/Rectangle 35s.png",
               desc: "Lorem ipsum",
               date: "22nd April",
               location: "New Delhi",
@@ -350,7 +350,7 @@ export default function EventsPage() {
             },
             {
               title: "Lorem ipsum",
-              image: "/Event/Rectangle 35c.png",
+              image: "/events/Rectangle 35c.png",
               desc: "Lorem ipsum",
               date: "22nd April",
               location: "New Delhi",
@@ -358,7 +358,7 @@ export default function EventsPage() {
             },
             {
               title: "Lorem ipsum",
-              image: "/Event/Rectangle 35t.png",
+              image: "/events/Rectangle 35t.png",
               desc: "Lorem ipsum",
               date: "22nd April",
               location: "New Delhi",
@@ -366,7 +366,7 @@ export default function EventsPage() {
             },
             {
               title: "Lorem ipsum",
-              image: "/Event/Rectangle 35s.png",
+              image: "/events/Rectangle 35s.png",
               desc: "Lorem ipsum",
               date: "22nd April",
               location: "New Delhi",
@@ -374,7 +374,7 @@ export default function EventsPage() {
             },
             {
               title: "Lorem ipsum",
-              image: "/Event/Rectangle 35c.png",
+              image: "/events/Rectangle 35c.png",
               desc: "Lorem ipsum",
               date: "22nd April",
               location: "New Delhi",
@@ -432,7 +432,7 @@ export default function EventsPage() {
                 <div className="flex flex-row items-center mt-4 text-black">
                   <div className="mr-3">
                     <Image
-                      src="/Event/MoneyWavy.png"
+                      src="/events/MoneyWavy.png"
                       alt="Money Icon"
                       width={22}
                       height={22}
