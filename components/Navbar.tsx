@@ -32,7 +32,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex lg:items-center gap-8">
+          <div className="hidden lg:flex lg:items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -45,7 +45,7 @@ export default function Navbar() {
           </div>
 
           {/* Auth Buttons */}
-          <div className="hidden md:flex md:items-center md:gap-4">
+          <div className="hidden lg:flex md:items-center md:gap-4">
             <button className="rounded-full text-primary-text hover:bg-primary-text hover:text-white text-lg font-medium px-4 py-2">
               Login
             </button>
@@ -55,7 +55,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Navigation Toggle */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 focus:outline-none"
@@ -67,7 +67,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg rounded-lg mt-2 p-4">
+          <div className="lg:hidden bg-white shadow-lg rounded-lg mt-2 p-4">
             <div className="space-y-4">
               {navLinks.map((link) => (
                 <Link
