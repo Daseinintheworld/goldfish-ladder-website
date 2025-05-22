@@ -132,7 +132,7 @@ const Podcast = () => {
       className="px-4 md:px-6 mt-20 md:mt-40 flex flex-col justify-center items-center"
     >
       <FadeInSection>
-        <div className="lg:max-w-5xl  md:max-w-3xl sm:max-w-l  max-w-xl mx-[30px] mt-16 md:mt-[272px] px-4 md:px-12 py-7 rounded-2xl bg-[#fff1db]">
+        <div className="lg:max-w-5xl  md:max-w-3xl sm:max-w-[320px] max-w-xl md:mx-[30px] mt-16 md:mt-[272px] px-4 md:px-12 py-7 rounded-2xl bg-[#fff1db]">
           <div className="mb-12">
             <motion.h2
               className="text-4xl md:text-6xl font-bold mb-4 md:mb-7 text-center lg:text-left"
@@ -228,7 +228,7 @@ const Podcast = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
           >
             <motion.button
-              className="bg-[#FFB32C] text-[#6B3F2D] hover:bg-[#FDBA3C]/90 py-2 px-6 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-semibold"
+              className="bg-primary text-[#6B3F2D] hover:bg-primary-text/90 py-2 px-6 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-semibold"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 5px 15px rgba(0,0,0,0.1)",

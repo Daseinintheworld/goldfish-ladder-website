@@ -84,7 +84,7 @@ const Cofounder = () => {
         transition={{ duration: 0.8, delay: 0.7 }}
       >
         <motion.button
-          className="bg-[#FFB32C] text-lg md:text-3xl font-bold py-3 px-4 md:py-7 md:px-8 rounded-md"
+          className="bg-primary text-lg md:text-3xl font-bold py-3 px-4 md:py-7 md:px-8 rounded-md"
           whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(0,0,0,0.2)" }}
           whileTap={{ scale: 0.95 }}
           animate={

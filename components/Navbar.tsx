@@ -37,7 +37,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-gray-700 hover:text-[#FDBA3C] transition-colors"
+                className="text-lg font-medium text-gray-700 hover:text-primary-text transition-colors"
               >
                 {link.name}
               </Link>
@@ -46,10 +46,10 @@ export default function Navbar() {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex md:items-center md:gap-4">
-            <button className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white text-lg font-medium px-4 py-2">
+            <button className="rounded-full text-primary-text hover:bg-primary-text hover:text-white text-lg font-medium px-4 py-2">
               Login
             </button>
-            <button className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white px-4 py-2 text-lg font-medium">
+            <button className="rounded-full bg-primary-text text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white px-4 py-2 text-lg font-medium">
               Sign Up
             </button>
           </div>
@@ -73,7 +73,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="block text-lg font-medium text-gray-700 hover:text-[#FDBA3C] transition-colors"
+                  className="block text-lg font-medium text-gray-700 hover:text-primary-text transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
@@ -81,10 +81,10 @@ export default function Navbar() {
               ))}
             </div>
             <div className="mt-6 flex flex-col gap-4">
-              <button className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white w-full py-2">
+              <button className="rounded-full text-primary-text hover:bg-primary-text hover:text-white w-full py-2">
                 Login
               </button>
-              <button className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white w-full py-2">
+              <button className="rounded-full bg-primary-text text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white w-full py-2">
                 Sign Up
               </button>
             </div>

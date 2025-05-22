@@ -71,7 +71,7 @@ const Banner = () => {
               transition={{ duration: 0.5, delay: 1 }}
             >
               <motion.button
-                className="bg-[#FFB32C] text-[#6B3F2D] hover:bg-[#FDBA3C]/90 py-1 px-8 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-medium"
+                className="bg-primary text-[#6B3F2D] hover:bg-primary/90 py-1 px-8 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-medium"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 5px 15px rgba(0,0,0,0.1)",

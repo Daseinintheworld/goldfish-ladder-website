@@ -157,7 +157,7 @@ const Internships = () => {
           transition={{ delay: 1.2, duration: 0.8 }}
         >
           <motion.button
-            className="bg-[#FFB32C] text-[#6B3F2D] hover:bg-[#FDBA3C]/90 py-3 px-9 text-3xl rounded-2xl font-semibold"
+            className="bg-primary text-[#6B3F2D] hover:bg-primary-text/90 py-3 px-9 text-3xl rounded-2xl font-semibold"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
