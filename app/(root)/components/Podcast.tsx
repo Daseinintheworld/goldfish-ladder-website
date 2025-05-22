@@ -1,12 +1,12 @@
 "use client";
+
 import PodcastCard from "./cards/PodcastCard";
 import podcast1 from "@/assets/podcasts/podcast1.png";
 import podcast2 from "@/assets/podcasts/podcast2.png";
 import podcast3 from "@/assets/podcasts/podcast3.png";
 import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
-import FadeInSection from "../../../Animations/FadeInSection";
-import React from "react";
+import { motion } from "motion/react";
+import FadeInSection from "@/Animations/FadeInSection";
 
 const Podcast = () => {
   const podcasts = [podcast1, podcast2, podcast3];

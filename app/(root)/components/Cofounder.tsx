@@ -3,9 +3,8 @@
 import Image from "next/image";
 import chatgpt from "@/assets/chatgpt.png";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import FadeInSection from "../../../Animations/FadeInSection";
-import React from "react";
+import { motion } from "motion/react";
+import FadeInSection from "@/Animations/FadeInSection";
 
 const Cofounder = () => {
   const [isVisible, setIsVisible] = useState(false);

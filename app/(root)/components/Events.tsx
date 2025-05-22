@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
 import EventCard from "./cards/EventCard";
 import eventImage1 from "@/assets/events/event1.png";
 import eventImage2 from "@/assets/events/event2.png";
 import eventImage3 from "@/assets/events/event3.png";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import FadeInSection from "../../../Animations/FadeInSection";
+import { motion } from "motion/react";
+import FadeInSection from "@/Animations/FadeInSection";
 
 const Events = () => {
   const [isVisible, setIsVisible] = useState(false);

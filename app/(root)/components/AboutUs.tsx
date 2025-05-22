@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import AboutUsCard from "./cards/AboutUsCard";
-import { motion } from "framer-motion";
+import { motion } from "motion/react"
 import FadeInSection from "@/Animations/FadeInSection";
 
 const AboutUs = () => {

@@ -2,7 +2,7 @@
 
 import bannerImage from "@/assets/banner-image.png";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react"
 import { useEffect, useState } from "react";
 import FadeInSection from "@/Animations/FadeInSection";
 
