@@ -15,14 +15,16 @@ const Chatbot = () => {
   }, [messages]);
 
   return (
-    <div className="chat-container shadow-lg rounded-lg p-4 text-white flex flex-col h-full  lg:mx-[0px] mx-[60px]">
+    <div className="chat-container shadow-lg rounded-lg p-4 text-white flex flex-col h-full mx-[30px] sm:mx-[60px] lg:mx-[0px] max-w-4xl">
       <div className="chat-header flex items-center gap-2 animate-fade-in">
         <Rocket className="text-yellow-300 animate-bounce" />
-        <h4 className="mb-0 text-lg font-bold">Cofounder AI Chat</h4>
+        <h4 className="mb-0 text-lg font-bold text-center sm:text-left">
+          Cofounder AI Chat
+        </h4>
       </div>
 
       <div
-        className="chat-messages flex-1 relative overflow-y-auto space-y-4 p-2 rounded-lg animate-slide-up mx-auto max-w-4xl bg-yellow-300 opacity-90 "
+        className="chat-messages flex-1 relative overflow-y-auto space-y-4 md:p-2 p-[0px]  rounded-lg animate-slide-up mx-auto max-w-full sm:max-w-4xl bg-yellow-300 opacity-90"
         ref={chatRef}
         style={{
           backgroundImage: `url(${chatgpt.src})`, 
@@ -36,7 +38,7 @@ const Chatbot = () => {
             <div className="avatar p-2">
               <Bot className="w-6 h-6" />
             </div>
-            <div className="message-bubble p-3  ">
+            <div className="message-bubble p-3">
               Hey there! I&apos;m your AI cofounder. What business challenge are we tackling today?
             </div>
           </div>
@@ -61,7 +63,7 @@ const Chatbot = () => {
                   message.role === "user"
                     ? "bg-blue-500 text-white"
                     : "bg-white bg-opacity-20 text-white"
-                } p-3 `}
+                } p-3`}
               >
                 {message.content}
               </div>
@@ -71,7 +73,7 @@ const Chatbot = () => {
       </div>
 
       {status === "error" && (
-        <p className="text-red-500 mt-2 animate-pulse">
+        <p className="text-red-500 mt-2 animate-pulse text-center">
           There seems to be an error.
         </p>
       )}
@@ -84,7 +86,7 @@ const Chatbot = () => {
           name="prompt"
           id="user-input"
           type="text"
-          className="form-control flex-1 px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
+          className="form-control flex-1 px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-300 text-sm sm:text-base"
           placeholder="Type your message..."
           autoComplete="off"
           value={input}
@@ -95,7 +97,7 @@ const Chatbot = () => {
         <button
           type="submit"
           id="send-btn"
-          className="btn bg-yellow-300 text-black px-5 py-3 rounded-lg shadow-md  transition-transform transform hover:scale-105"
+          className="btn bg-yellow-300 text-black px-4 py-2 sm:px-5 sm:py-3 rounded-lg shadow-md transition-transform transform hover:scale-105 text-sm sm:text-base"
         >
           Send
         </button>

@@ -38,6 +38,7 @@
   background: rgba(224, 158, 37, 0.70); 
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
+  filter: blur(0);
 }
 
 .message-row.user .message-bubble {
