@@ -44,7 +44,12 @@ const Cofounder = () => {
         </div>
       </FadeInSection>
 
-      <motion.div className="rounded-xl overflow-hidden">
+      <motion.div
+        className="rounded-xl overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }} 
+      >
         <Chatbot />
       </motion.div>
 
@@ -52,7 +57,7 @@ const Cofounder = () => {
         className="mt-14 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
-        transition={{ duration: 0.8, delay: 0.7 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
       >
         <motion.button
           className="bg-primary text-lg md:text-3xl font-bold py-3 px-4 md:py-7 md:px-8 rounded-md"
@@ -70,7 +75,7 @@ const Cofounder = () => {
               : {}
           }
           transition={{
-            boxShadow: { duration: 3, repeat: Infinity, delay: 1 },
+            boxShadow: { duration: 3, repeat: Infinity, delay: 0.5 },
           }}
         >
           Meet Your AI co-founder

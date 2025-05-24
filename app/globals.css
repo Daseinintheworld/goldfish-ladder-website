@@ -30,15 +30,19 @@
 }
 
 .avatar {
-  @apply w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-lg mx-3 text-white;
+  @apply w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-lg mr-3 text-white ;
 }
 
 .message-bubble {
-  @apply max-w-[70%] px-4 py-3 rounded-[18px] text-[1.1em] leading-[1.5] bg-primary text-white break-words;
+  @apply max-w-[70%] px-4 py-3 rounded-[18px] text-[1.1em] leading-[1.5] text-white break-words;
+  background: rgba(224, 158, 37, 0.70); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .message-row.user .message-bubble {
-  @apply bg-[#e09e25] text-white;
+  
+  @apply text-white;
 }
 
 .message-row.user .avatar {
@@ -50,7 +54,8 @@
 }
 
 .message-row.assistant .message-bubble {
-  @apply bg-primary text-black;
+  
+  @apply text-black;
 }
 
 ::selection {
@@ -69,4 +74,37 @@
 .btn-primary:hover,
 .btn-primary:focus {
   @apply bg-[#e09e25];
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-in-out;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
