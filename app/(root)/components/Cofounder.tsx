@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import chatgpt from "@/assets/chatgpt.png";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import FadeInSection from "@/Animations/FadeInSection";
+import Chatbot from "./chabot/Chatbot";
 
 const Cofounder = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,36 +44,9 @@ const Cofounder = () => {
         </div>
       </FadeInSection>
 
-      <motion.figure
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={
-          isVisible
-            ? {
-                opacity: 1,
-                scale: 1,
-                boxShadow: [
-                  "0px 0px 0px rgba(0,0,0,0.1)",
-                  "0px 20px 30px rgba(0,0,0,0.15)",
-                  "0px 0px 0px rgba(0,0,0,0.1)",
-                ],
-              }
-            : { opacity: 0 }
-        }
-        transition={{
-          opacity: { duration: 0.8, delay: 0.3 },
-          scale: { duration: 0.8, delay: 0.3 },
-          boxShadow: { duration: 4, repeat: Infinity, delay: 1 },
-        }}
-        className="rounded-xl overflow-hidden"
-      >
-        <Image
-          src={chatgpt}
-          alt="Chat GPT"
-          height={714}
-          width={1070}
-          className="object-contain"
-        />
-      </motion.figure>
+      <motion.div className="rounded-xl overflow-hidden">
+        <Chatbot />
+      </motion.div>
 
       <motion.div
         className="mt-14 text-center"
