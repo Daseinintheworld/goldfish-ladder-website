@@ -29,7 +29,7 @@ const Cofounder = () => {
   return (
     <section
       id="cofounder-section"
-      className="max-w-6xl mx-auto mt-20 md:mt-28 mb-20 md:mb-36 px-4 md:px-6"
+      className="max-w-6xl mx-auto mt-20 md:mt-28 mb-20 md:mb-36 md:px-6"
     >
       <FadeInSection>
         <div className="max-w-[482px] mx-auto md:mx-0 space-y-6 py-10 text-center md:text-left">
@@ -48,7 +48,7 @@ const Cofounder = () => {
         className="rounded-xl overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }} 
+        transition={{ duration: 0.8, delay: 0.6 }}
       >
         <Chatbot />
       </motion.div>
