@@ -35,13 +35,14 @@
 
 .message-bubble {
   @apply max-w-[70%] px-4 py-3 rounded-[18px] text-[1.1em] leading-[1.5] text-white break-words;
-  background: rgba(224, 158, 37, 0.695);
+  /* background: rgba(224, 158, 37, 0.695); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   filter: blur(0);
-  /* background: #ffb22cd1; */
+  background: #ffb22cec;
   font-weight:500;
   color: white;
+
 }
 
 .message-row.user .message-bubble {
