@@ -1,5 +1,5 @@
-import { Rocket, Bot } from "lucide-react";
-import { useChat } from "@ai-sdk/react";
+import { Rocket, Bot } from "lucide-react"; 
+import { useChat } from "@ai-sdk/react"; 
 import { useEffect, useRef } from "react";
 import chatgpt from "@/assets/chatgpt.png";
 
@@ -15,7 +15,7 @@ const Chatbot = () => {
   }, [messages]);
 
   return (
-    <div className="chat-container shadow-lg rounded-lg text-white flex flex-col h-full sm:mx-[60px] lg:mx-[0px] max-w-4xl mx-2">
+    <div className="chat-container shadow-lg rounded-lg p-4 text-white flex flex-col h-full mx-[30px] sm:mx-[60px] lg:mx-[0px] max-w-4xl">
       <div className="chat-header flex items-center gap-2 animate-fade-in">
         <Rocket className="text-yellow-300 animate-bounce" />
         <h4 className="mb-0 text-lg font-bold text-center sm:text-left">
@@ -24,12 +24,12 @@ const Chatbot = () => {
       </div>
 
       <div
-        className="chat-messages flex-1 relative overflow-y-auto space-y-4 md:p-2 p-[0px]  rounded-lg animate-slide-up mx-auto max-w-full sm:max-w-4xl bg-yellow-300 opacity-90"
+        className="chat-messages flex-1 relative overflow-y-auto space-y-4 md:p-2 p-[0px]  rounded-lg animate-slide-up mx-auto max-w-full sm:max-w-4xl  opacity-99"
         ref={chatRef}
         style={{
-          backgroundImage: `url(${chatgpt.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage: `url(${chatgpt.src})`, 
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
         }}
       >
         {/* Chat Content */}
@@ -39,8 +39,7 @@ const Chatbot = () => {
               <Bot className="w-6 h-6" />
             </div>
             <div className="message-bubble p-3">
-              Hey there! I&apos;m your AI cofounder. What business challenge are
-              we tackling today?
+              Hey there! I&apos;m your AI cofounder. What business challenge are we tackling today?
             </div>
           </div>
           {messages.map((message) => (
@@ -51,20 +50,12 @@ const Chatbot = () => {
               } animate-fade-in`}
             >
               <div
-                className={`avatar ${
-                  message.role === "user"
-                    ? "bg-blue-400 text-white"
-                    : "bg-yellow-300 text-black"
-                } rounded-full p-2`}
+                className={`avatar rounded-full p-2`}
               >
                 {message.role === "user" ? "U" : <Bot className="w-6 h-6" />}
               </div>
               <div
-                className={`message-bubble ${
-                  message.role === "user"
-                    ? "bg-blue-500 text-white"
-                    : "bg-white bg-opacity-20 text-white"
-                } p-3`}
+                className={`message-bubble  p-3`}
               >
                 {message.content}
               </div>
