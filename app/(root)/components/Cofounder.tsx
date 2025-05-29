@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import FadeInSection from "@/Animations/FadeInSection";
-import Chatbot from "./chabot/Chatbot";
+import Link from "next/link";
+import { Play } from "lucide-react";
 
 const Cofounder = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,10 +30,10 @@ const Cofounder = () => {
   return (
     <section
       id="cofounder-section"
-      className="max-w-6xl mx-auto mt-20 md:mt-28 mb-20 md:mb-36 md:px-6"
+      className="max-w-6xl mx-auto mt-20 md:mt-28 mb-20 md:mb-36"
     >
       <FadeInSection>
-        <div className="max-w-[482px] mx-auto md:mx-0 space-y-6 py-10 text-center md:text-left">
+        <div className=" mx-auto md:mx-0 space-y-6 py-10 text-center md:text-left">
           <motion.h1
             className="text-4xl font-bold md:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
@@ -45,12 +46,31 @@ const Cofounder = () => {
       </FadeInSection>
 
       <motion.div
-        className="rounded-xl overflow-hidden"
+        className="rounded-xl bg-primary p-1"
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <Chatbot />
+        <div className="text-center md:px-28">
+          <h1 className="text-8xl font-bold">Build With AI</h1>
+          <p className="font-semibold text-2xl">
+            Your ultimate guide to AI development tools and Frameworks
+          </p>
+        </div>
+        <div
+          className={`flex justify-center items-center flex-col md:flex-row gap-2 rounded-b-xl bg-white/20 bg-[url(/chatgpt.png)] bg-cover bg-center h-[600px] bg-blend-overlay`}
+        >
+          <Link
+            href={"/ai-co-founder"}
+            className="px-14 py-2.5 bg-primary text-4xl font-extrabold rounded-2xl text-white"
+          >
+            Get Started
+          </Link>
+          <button className="px-14 py-2.5 outline-2 outline-primary bg-white font-semibold text-4xl rounded-2xl flex gap-2 items-center">
+            <Play className="text-primary h-10 w-10" />
+            How it works
+          </button>
+        </div>
       </motion.div>
 
       <motion.div
