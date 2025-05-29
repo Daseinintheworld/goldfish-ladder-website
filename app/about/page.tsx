@@ -15,47 +15,45 @@ export default function AboutPage() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:items-center md:gap-12">
-            {/* Image */}
-            <motion.div
-              className="relative w-full h-64 sm:h-80 md:h-[400px] md:w-1/2"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Image
-                src="/about/about_hero_01.png"
-                alt="About illustration"
-                fill
-                className="object-contain"
-              />
-            </motion.div>
-
-            {/* Text */}
-            <motion.div
-              className="mt-10 md:mt-0 md:w-1/2 space-y-4 text-center md:text-left"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                About Us
-              </h2>
-              <p className="text-base sm:text-lg text-gray-700">
-                Goldfish Ladder is a launchpad for high school innovators.
-                <br />
-                We empower teenage founders to take their first steps into
-                entrepreneurship—with tools, mentorship, and real funding. From
-                idea to execution, our platform provides AI support, expert
-                guidance, and opportunities to pitch in our Mini Shark Tank.Our
-                mission is simple: make building a startup as accessible as
-                starting a school project.
-              </p>
-            </motion.div>
-          </div>
+        <div className="max-w-5xl mx-auto flex flex-col md:items-center md:gap-12">
+          {/* Text */}
+          <motion.div
+            className="mt-10 md:mt-0 space-y-4 text-center"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+              About Us
+            </h2>
+            <p className="text-base sm:text-lg text-gray-700">
+              <strong>Goldfish Ladder</strong> was born not in a boardroom, but
+              in a classroom—from a scribbled idea, a sense of frustration, and
+              a spark of rebellion. As students, we saw brilliant peers silenced
+              not for lack of talent, but for lack of opportunity, constantly
+              told to wait until they were “ready.” Tired of waiting, we
+              questioned why young people couldn&apos;t start building something
+              meaningful now. Goldfish Ladder emerged from that defiance—a
+              platform to empower driven, creative youth whose ideas deserve a
+              stage, not a delay.
+            </p>
+          </motion.div>
+          {/* Image */}
+          <motion.div
+            className="relative w-full h-64 sm:h-80 md:h-[400px] md:w-1/2"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Image
+              src="/about/about_hero_01.png"
+              alt="About illustration"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
         </div>
       </motion.section>
 
