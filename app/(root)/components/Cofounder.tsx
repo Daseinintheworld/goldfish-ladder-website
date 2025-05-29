@@ -46,14 +46,14 @@ const Cofounder = () => {
       </FadeInSection>
 
       <motion.div
-        className="rounded-xl bg-primary p-1"
+        className="rounded-xl bg-primary p-1 mx-2"
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
         <div className="text-center md:px-28">
-          <h1 className="text-8xl font-bold">Build With AI</h1>
-          <p className="font-semibold text-2xl">
+          <h1 className="text-3xl md:text-8xl font-bold">Build With AI</h1>
+          <p className="font-semibold text-lg md:text-2xl">
             Your ultimate guide to AI development tools and Frameworks
           </p>
         </div>
@@ -62,12 +62,12 @@ const Cofounder = () => {
         >
           <Link
             href={"/ai-co-founder"}
-            className="px-14 py-2.5 bg-primary text-4xl font-extrabold rounded-2xl text-white"
+            className="px-14 py-2.5 bg-primary text-xl md:text-4xl font-extrabold rounded-2xl text-white"
           >
             Get Started
           </Link>
-          <button className="px-14 py-2.5 outline-2 outline-primary bg-white font-semibold text-4xl rounded-2xl flex gap-2 items-center">
-            <Play className="text-primary h-10 w-10" />
+          <button className="px-14 py-2.5 outline-2 outline-primary bg-white font-semibold text-xl md:text-4xl rounded-2xl flex gap-2 items-center">
+            <Play className="text-primary h-4 w-4 md:h-10 md:w-10" />
             How it works
           </button>
         </div>
