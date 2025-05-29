@@ -2,7 +2,7 @@
 
 import bannerImage from "@/assets/banner-image.png";
 import Image from "next/image";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import FadeInSection from "@/Animations/FadeInSection";
 
@@ -55,14 +55,23 @@ const Banner = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              Goldfish Ladder helps student founders bring their ideas to
-              life—faster and smarter.
+              They told us to wait.
               <br />
-              Our AI Co-founder assists you with everything from brainstorming
-              and business plans to pitch decks and market research.
+              Wait until we&apos;re older. Smarter. More “ready.” But we were
+              done waiting.
               <br />
-              Whether you&apos;re just starting out or ready to scale, your AI
-              partner is here 24/7 to guide the way.
+              Goldfish Ladder was built by students who were tired of seeing
+              incredible teenage ideas go unheard. We created a space where high
+              schoolers could pitch real startups, get funded, and find mentors
+              who actually believe in them.
+              <br />
+              Because why shouldn&apos;t a 16-year-old change the world?We
+              called it Goldfish Ladder—because even if the world thinks we
+              don&apos;t belong on the climb, we&apos;re doing it anyway.
+              <br />
+              Ready to build something real?
+              <br />
+              Explore. Dream. Pitch.This is your stage.
             </motion.p>
             <motion.div
               className="flex items-center justify-center md:justify-start sm:mx-auto"
