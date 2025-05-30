@@ -63,9 +63,9 @@ export default function PodcastPage() {
           </div>
         </motion.div>
 
-        <div className="bg-primary/20 border border-primary sm:mx-[50px] rounded-xl py-8 text-center">
-          <h1 className="text-8xl font-bold">Upcoming</h1>
-        </div>
+              <div className="bg-primary/20 border border-primary mx-4 sm:mx-[50px] rounded-xl py-8 text-center">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold">Upcoming</h1>
+      </div>
       </section>
     </div>
   );
