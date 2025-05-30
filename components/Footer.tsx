@@ -57,7 +57,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="lg:ml-[60%] md:ml-[30%] sm:ml-[20%] ml-[8%] flex flex-row gap-[10px] md:gap-[50px] sm:gap-[20px] ">
+      <div className="lg:ml-[60%] md:ml-[30%] sm:ml-[20%] ml-[-7%] flex flex-row gap-[10px] md:gap-[50px] sm:gap-[20px] ">
         <div className="flex flex-col justify-center items-center md:w-[200px] sm:w-[130px] w-[130px] ">
           <h2 className="mb-[20px] font-bold md:text-xl sm:text-[15px] text-[12px] ">Company</h2>
           <div className="md:text-[16px] sm:text-[16px] text-[12px] flex flex-col justify-center items-center">
