@@ -7,11 +7,11 @@ import insta from "@/assets/events/vectorInsta.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#6B3F2D] h-auto w-full flex flex-col items-center justify-center text-white m-auto pt-[45px] md:px-[10%] sm:px-[10px]">
+    <footer className="bg-[#6B3F2D] h-auto w-full flex flex-col items-center justify-center text-white m-auto pt-[45px] md:px-[10%] sm:px-[10px] overflow-hidden">
      
      <div className="">
      <div className="w-full flex justify-center items-center ">
-        <div className="flex flex-col justify-center items-center min-w-[200px] ">
+        <div className="flex flex-col justify-center items-center min-w-[170px] ">
           {/* Use the Image component */}
           <Image
         src={fishSquare}
@@ -57,7 +57,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="lg:ml-[60%] md:ml-[30%] sm:ml-[20%] ml-[-7%] flex flex-row gap-[10px] md:gap-[50px] sm:gap-[20px] ">
+      <div className="lg:ml-[60%] md:ml-[30%] sm:ml-[20%] ml-[-13%] flex flex-row gap-[10px] md:gap-[50px] sm:gap-[20px] ">
         <div className="flex flex-col justify-center items-center md:w-[200px] sm:w-[130px] w-[130px] ">
           <h2 className="mb-[20px] font-bold md:text-xl sm:text-[15px] text-[12px] ">Company</h2>
           <div className="md:text-[16px] sm:text-[16px] text-[12px] flex flex-col justify-center items-center">
@@ -71,7 +71,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="flex flex-col w-[130px] sm:w-[130px] text-sm">
+        <div className="flex flex-col w-[100px] sm:w-[130px] text-sm">
           <h2 className="mb-[29px] font-bold md:text-xl sm:text-[15px] text-[12px]">Support</h2>
           <div className="md:text-[16px] sm:text-[14px] text-[12px] flex flex-col ">
 
