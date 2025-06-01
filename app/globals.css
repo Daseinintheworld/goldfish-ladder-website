@@ -5,6 +5,15 @@
   --color-primary-text: #fdba3c;
 }
 
+.font-bebas {
+  font-family: "Bebas Neue", cursive;
+}
+.font-josefin {
+  font-family: "Josefin Sans", sans-serif;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
 .chat-container {
   @apply bg-primary rounded-2xl shadow-2xl p-0 flex flex-col h-[80vh];
 }

@@ -1,10 +1,30 @@
+
+
+
+// app/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Bebas_Neue, Josefin_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import LayoutWrapper from "./LayoutWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
+const bebasNeue = Bebas_Neue({ 
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas"
+});
+const josefinSans = Josefin_Sans({ 
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-josefin"
+});
+const montserrat = Montserrat({ 
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-montserrat"
+});
+
+
 
 export const metadata: Metadata = {
   title: "GoldFish",
@@ -18,10 +38,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+    <body className={`${inter.className} ${bebasNeue.variable} ${josefinSans.variable} ${montserrat.variable} antialiased`}>
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );
