@@ -46,13 +46,12 @@ export default function Navbar() {
 
           {/* Auth Buttons */}
           <div className="hidden lg:flex md:items-center md:gap-4">
-          <Link href="/log_in">
-
-            <button className="rounded-full text-primary-text hover:bg-primary-text hover:text-white text-lg font-medium px-4 py-2">
-              Login
-            </button>
-          </Link>
-            <Link href="/sign_in">
+            <Link href="/log-in">
+              <button className="rounded-full text-primary-text hover:bg-primary-text hover:text-white text-lg font-medium px-4 py-2">
+                Login
+              </button>
+            </Link>
+            <Link href="/sign-in">
               <button className="rounded-full bg-primary-text text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white px-4 py-2 text-lg font-medium">
                 Sign Up
               </button>
@@ -86,12 +85,12 @@ export default function Navbar() {
               ))}
             </div>
             <div className="mt-6 flex flex-col gap-4">
-            <Link href="/log_in">
-              <button className="rounded-full text-primary-text hover:bg-primary-text hover:text-white w-full py-2">
-                Login
-              </button>
-            </Link>
-              <Link href="/sign_in">
+              <Link href="/log-in">
+                <button className="rounded-full text-primary-text hover:bg-primary-text hover:text-white w-full py-2">
+                  Login
+                </button>
+              </Link>
+              <Link href="/sign-in">
                 <button className="rounded-full bg-primary-text text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white w-full py-2">
                   Sign Up
                 </button>
