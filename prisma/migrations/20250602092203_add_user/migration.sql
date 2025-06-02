@@ -9,7 +9,7 @@ CREATE TABLE "User" (
     "createdAt" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "User_pkey" primaryColor KEY ("id")
 );
 
 -- CreateTable
@@ -28,7 +28,7 @@ CREATE TABLE "Account" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "Account_pkey" PRIMARY KEY ("provider","providerAccountId")
+    CONSTRAINT "Account_pkey" primaryColor KEY ("provider","providerAccountId")
 );
 
 -- CreateTable
@@ -39,7 +39,7 @@ CREATE TABLE "Session" (
     "createdAt" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "Session_pkey" PRIMARY KEY ("sessionToken")
+    CONSTRAINT "Session_pkey" primaryColor KEY ("sessionToken")
 );
 
 -- CreateTable
@@ -48,7 +48,7 @@ CREATE TABLE "VerificationToken" (
     "token" TEXT NOT NULL,
     "expires" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "VerificationToken_pkey" PRIMARY KEY ("identifier","token")
+    CONSTRAINT "VerificationToken_pkey" primaryColor KEY ("identifier","token")
 );
 
 -- CreateIndex
