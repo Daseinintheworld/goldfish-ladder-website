@@ -5,6 +5,7 @@ import Image from "next/image";
 import CredentialsSignUpForm from "./credentials-signup-form";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import { signInWithGoogle } from "@/lib/actions/user.action";
 
 const SignUpForm = async (props: {
   searchParams: Promise<{ callbackUrl: string }>;
@@ -78,17 +79,22 @@ const SignUpForm = async (props: {
                 <h2 className="text-xl font-bebas md:text-2xl lg:text-3xl font-medium mb-5 mt-6">
                   Sign-up with:
                 </h2>
-                <div className="flex flex-row gap-[8%] justify-center w-full mb-5">
-                  <div className="flex flex-col items-center">
-                    <Image
-                      src={google}
-                      alt="GoldFish Ladder"
-                      width={40}
-                      height={40}
-                      className="w-[40px] h-[40px] max-w-3xl  mx-auto mb-4  "
-                    />
+                <div className="flex flex-row gap-[8%] justify-center w-full mb-5 ">
+                  <form
+                    action={signInWithGoogle}
+                    className="flex flex-col items-center "
+                  >
+                    <button className="cursor-pointer">
+                      <Image
+                        src={google}
+                        alt="GoldFish Ladder"
+                        width={40}
+                        height={40}
+                        className="w-[40px] h-[40px] max-w-3xl  mx-auto mb-4  "
+                      />
+                    </button>
                     <p className="text-sm  md:text-md lg:text-md">Google</p>
-                  </div>
+                  </form>
                 </div>
                 <p className="text-md font-bebas md:text-lg lg:text-xl font-medium ">
                   Already a user?
