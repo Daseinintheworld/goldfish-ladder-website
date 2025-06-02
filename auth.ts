@@ -4,6 +4,7 @@ import { prisma } from "@/db/prisma";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { compareSync } from "bcrypt-ts-edge";
 import type { NextAuthConfig } from "next-auth";
+import Google from "next-auth/providers/google";
 
 export const config = {
   pages: {
@@ -51,6 +52,7 @@ export const config = {
         return null;
       },
     }),
+    Google,
   ],
   callbacks: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
