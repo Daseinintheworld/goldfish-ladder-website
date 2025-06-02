@@ -5,11 +5,14 @@ import CredentialsSignInForm from "./credentianls-signin-form";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 
-const Form = async () => {
+const SignInForm = async (props: {
+  searchParams: Promise<{ callbackUrl: string }>;
+}) => {
+  const { callbackUrl } = await props.searchParams;
   const session = await auth();
 
   if (session) {
-    return redirect("/");
+    return redirect(callbackUrl || "/");
   }
 
   return (
@@ -31,4 +34,4 @@ const Form = async () => {
   );
 };
 
-export default Form;
+export default SignInForm;
