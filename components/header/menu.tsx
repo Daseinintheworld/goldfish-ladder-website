@@ -47,7 +47,7 @@ const Menu = async () => {
             </div>
 
             {!session && (
-              <div className="flex flex-col ">
+              <div className="flex gap-2">
                 <Link href="/sign-in">
                   <button className="rounded-full text-primaryTextColor hover:bg-primaryTextColor hover:text-white text-lg font-medium px-4 py-2">
                     Login
