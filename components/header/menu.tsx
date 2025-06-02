@@ -26,7 +26,7 @@ const Menu = async () => {
       <nav className="md:flex w-full max-w-xs gap-1">
         <UserButton />
       </nav>
-      <nav className="md:hidden">
+      <nav className="lg:hidden">
         <Sheet>
           <SheetTrigger className="align-middle">
             <EllipsisVertical />
