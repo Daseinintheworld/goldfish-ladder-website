@@ -66,7 +66,7 @@ const PodcastCard = ({ image }: { image: StaticImageData }) => {
             Lorem Ipsum
           </p>
           <motion.button
-            className="bg-[#6B3F2D] text-white hover:bg-primary hover:text-[#6B3F2D] py-1 md:py-2 px-4 md:px-6 text-sm md:text-base rounded-md font-medium transition-all duration-300"
+            className="bg-[#6B3F2D] text-white hover:bg-primaryColor hover:text-[#6B3F2D] py-1 md:py-2 px-4 md:px-6 text-sm md:text-base rounded-md font-medium transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

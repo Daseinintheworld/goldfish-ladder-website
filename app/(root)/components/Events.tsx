@@ -73,7 +73,7 @@ const Events = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
       >
         <motion.button
-          className="bg-primary text-[#6B3F2D] hover:bg-primary/90 py-2 px-6 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-semibold"
+          className="bg-primaryColor text-[#6B3F2D] hover:bg-primaryColor/90 py-2 px-6 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-semibold"
           whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(0,0,0,0.1)" }}
           whileTap={{ scale: 0.95 }}
         >

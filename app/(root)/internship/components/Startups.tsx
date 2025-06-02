@@ -63,7 +63,7 @@ const Startups = () => {
                   </div>
 
                   <div className="container mx-auto px-1  mt-[20px]">
-                    <button className="bg-primary-text h-[40px] text-white hover:bg-primary-text/90  w-[60%]">
+                    <button className="bg-primaryColor-text h-[40px] text-white hover:bg-primaryTextColor/90  w-[60%]">
                       Apply
                     </button>
                   </div>

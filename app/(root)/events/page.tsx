@@ -266,7 +266,7 @@ export default function EventsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-primary py-20 max-w-[1047px] rounded-xl mt-24 md:px-12">
+      <section className="bg-primaryColor py-20 max-w-[1047px] rounded-xl mt-24 md:px-12">
         <motion.div
           className="flex flex-col w-full w-max-[1047px]"
           initial={{ opacity: 0, y: 50 }}

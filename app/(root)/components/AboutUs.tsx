@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import AboutUsCard from "./cards/AboutUsCard";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import FadeInSection from "@/Animations/FadeInSection";
 
 const AboutUs = () => {
@@ -80,7 +80,7 @@ const AboutUs = () => {
       </FadeInSection>
 
       <motion.div
-        className="bg-primary px-2 py-6 md:px-16 md:py-11 rounded-3xl   md:mx-[80px]   "
+        className="bg-primaryColor px-2 py-6 md:px-16 md:py-11 rounded-3xl   md:mx-[80px]   "
         initial={{ opacity: 0, scale: 0.95 }}
         animate={
           isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }

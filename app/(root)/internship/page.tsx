@@ -50,7 +50,7 @@ export default function InternshipPage() {
       {/* Yellow Section */}
       <FadeInSection>
         <motion.div
-          className="container mx-auto bg-primary-text px-6 md:px-10 py-20  text-black rounded-3xl"
+          className="container mx-auto bg-primaryTextColor px-6 md:px-10 py-20  text-black rounded-3xl"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

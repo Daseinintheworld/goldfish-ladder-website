@@ -46,7 +46,7 @@ const Cofounder = () => {
       </FadeInSection>
 
       <motion.div
-        className="rounded-xl bg-primary p-1 mx-2"
+        className="rounded-xl bg-primaryColor p-1 mx-2"
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
@@ -62,12 +62,12 @@ const Cofounder = () => {
         >
           <Link
             href={"/ai-co-founder"}
-            className="px-14 py-2.5 bg-primary text-xl md:text-4xl font-extrabold rounded-2xl text-white"
+            className="px-14 py-2.5 bg-primaryColor text-xl md:text-4xl font-extrabold rounded-2xl text-white"
           >
             Get Started
           </Link>
-          <button className="px-14 py-2.5 outline-2 outline-primary bg-white font-semibold text-xl md:text-4xl rounded-2xl flex gap-2 items-center">
-            <Play className="text-primary h-4 w-4 md:h-10 md:w-10" />
+          <button className="px-14 py-2.5 outline-2 outline-primbg-primaryColor bg-white font-semibold text-xl md:text-4xl rounded-2xl flex gap-2 items-center">
+            <Play className="text-primbg-primaryColor h-4 w-4 md:h-10 md:w-10" />
             How it works
           </button>
         </div>
@@ -80,7 +80,7 @@ const Cofounder = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <motion.button
-          className="bg-primary text-lg md:text-3xl font-bold py-3 px-4 md:py-7 md:px-8 rounded-md"
+          className="bg-primaryColor text-lg md:text-3xl font-bold py-3 px-4 md:py-7 md:px-8 rounded-md"
           whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(0,0,0,0.2)" }}
           whileTap={{ scale: 0.95 }}
           animate={
