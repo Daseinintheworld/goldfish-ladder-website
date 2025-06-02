@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #ffb32c;
-  --color-primary-text: #fdba3c;
+  --color-primaryColor: #ffb32c;
+  --color-primaryTextColor: #fdba3c;
 }
 
 .font-bebas {
@@ -52,9 +52,8 @@
   -webkit-backdrop-filter: blur(10px);
   filter: blur(0);
   background: #ffb22cec;
-  font-weight:500;
+  font-weight: 500;
   color: white;
-
 }
 
 .message-row.user .message-bubble {
