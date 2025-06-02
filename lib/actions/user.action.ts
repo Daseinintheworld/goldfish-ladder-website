@@ -67,3 +67,7 @@ export async function signUpUser(prevState: unknown, formData: FormData) {
     return { success: false, message: formatError(error) };
   }
 }
+
+export async function signInWithGoogle() {
+  await signIn("google");
+}
