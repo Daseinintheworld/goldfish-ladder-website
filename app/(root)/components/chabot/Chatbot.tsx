@@ -1,4 +1,5 @@
-import { ArrowUp, Bot, Mic } from "lucide-react";
+import Image from "next/image";
+import { ArrowUp } from "lucide-react";
 import { useChat } from "@ai-sdk/react";
 import { useEffect, useRef } from "react";
 
@@ -22,8 +23,8 @@ const Chatbot = () => {
       >
         {/* Intro Message */}
         <div className="flex gap-2 items-start">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-[#854836]">
-            <Bot className="w-4 h-4 text-white" />
+          <div className="w-6 h-6 rounded-full overflow-hidden">
+            <Image src="/aiCoFounder/bot.png" alt="Bot" width={24} height={24} />
           </div>
           <div className="px-4 py-2 rounded-2xl shadow text-sm bg-[#FCD699BF] text-gray-800">
             <p>
@@ -39,21 +40,21 @@ const Chatbot = () => {
             className={`flex items-start gap-2 ${message.role === "user" ? "justify-end" : ""}`}
           >
             {message.role !== "user" && (
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-[#854836]">
-                <Bot className="w-4 h-4 text-white" />
+              <div className="w-6 h-6 rounded-full overflow-hidden">
+                <Image src="/aiCoFounder/bot.png" alt="Bot" width={24} height={24} />
               </div>
             )}
 
             {message.role === "user" && (
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-pink-500 text-white text-sm font-bold">
-                U
+              <div className="w-6 h-6 rounded-full overflow-hidden">
+                <Image src="/aiCoFounder/user.png" alt="User" width={24} height={24} />
               </div>
             )}
 
             <div
               className={`px-4 py-2 rounded-2xl shadow max-w-sm text-sm transition-all duration-200 ease-in-out ${
                 message.role === "user"
-                  ? "bg-pink-100 text-gray-800"
+                  ? "bg-[#FCD699BF] text-gray-900"
                   : "bg-[#FCD699BF] text-gray-900"
               }`}
             >
@@ -73,14 +74,14 @@ const Chatbot = () => {
       {/* Input Bar */}
       <form
         onSubmit={handleSubmit}
-        className="mt-4 flex items-center gap-2 bg-white p-3 rounded-xl shadow border border-[#854836]"
+        className="mt-4 flex items-center gap-2 bg-white p-3 rounded-xl shadow border border-[#f3d5b3]"
       >
         <input
           name="prompt"
           id="user-input"
           type="text"
-          className="flex-1 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FCD699BF] text-sm"
-          placeholder="Type your message..."
+          className="flex-1 px-3 py-2 rounded-lg border border-[#f3d5b3] focus:outline-none focus:ring-2 focus:ring-[#FCD699BF] text-sm bg-[#FCD699BF]"
+          placeholder="Ask Anything..."
           autoComplete="off"
           value={input}
           onChange={handleInputChange}
@@ -91,20 +92,26 @@ const Chatbot = () => {
         {/* Mic Button */}
         <button
           type="button"
-          className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-[#854836]"
+          className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
           onClick={() => {
             alert("Voice input coming soon!");
           }}
         >
-          <Mic className="w-5 h-5" />
+          <Image
+            src="/aiCoFounder/voice.png"
+            alt="Voice"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
         </button>
 
         {/* Send Button */}
         <button
           type="submit"
-          className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-[#854836]"
+          className="p-2 rounded-lg bg-[#854836] hover:bg-[#6e392c] transition-colors"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-5 h-5 text-white" />
         </button>
       </form>
     </div>

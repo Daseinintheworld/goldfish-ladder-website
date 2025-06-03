@@ -15,7 +15,7 @@ export default function AiCoFounderPage() {
 
       {/* Main Content */}
       <main className="flex-1 w-full">
-        <section className="max-w-[965px] mx-auto mt-20 mb-20 md:mb-44 px-[40px] relative">
+        <section className="max-w-[965px] mx-auto mt-5 mb-20 md:mb-44 px-[20px] relative">
 
           {/* Header Section with Icons on Top */}
           <motion.div
@@ -27,19 +27,59 @@ export default function AiCoFounderPage() {
           >
             {/* Icons Line */}
             <div className="flex justify-end gap-6 mb-6">
-              {[1, 2, 3].map((icon) => (
-                <div
-                  key={icon}
-                  className="w-12 h-12 rounded-full border border-[#854836] flex items-center justify-center bg-white shadow-sm"
+              {/* Share Icon */}
+              <div className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer hover:bg-yellow-400 transition-colors duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="#854836"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-7 h-7"
+                  viewBox="0 0 24 24"
                 >
-                  <img
-                    src={`/icons/icon${icon}.png`}
-                    alt={`Icon ${icon}`}
-                    className="w-7 h-7 object-contain"
-                  />
-                </div>
-              ))}
+                  <circle cx="18" cy="5" r="3" />
+                  <circle cx="6" cy="12" r="3" />
+                  <circle cx="18" cy="19" r="3" />
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                </svg>
+              </div>
+
+              {/* User Icon */}
+              <div className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer hover:bg-yellow-400 transition-colors duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="#854836"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-7 h-7"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M4 21v-2a4 4 0 0 1 3-3.87" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+
+              {/* Three Vertical Dots Icon */}
+              <div className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer hover:bg-yellow-400 transition-colors duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#854836"
+                  className="w-7 h-7"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="5" r="2" />
+                  <circle cx="12" cy="12" r="2" />
+                  <circle cx="12" cy="19" r="2" />
+                </svg>
+              </div>
             </div>
+
 
             {/* Heading */}
             <h1 className="font-bold text-4xl md:text-6xl mb-4">
