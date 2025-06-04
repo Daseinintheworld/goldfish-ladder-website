@@ -32,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link rel="icon" href="/mascot.svg" sizes="any" />
       <body
         className={`${inter.className} ${bebasNeue.variable} ${josefinSans.variable} ${montserrat.variable} antialiased`}
       >
