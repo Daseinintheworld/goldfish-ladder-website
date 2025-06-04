@@ -1,9 +1,6 @@
 "use client";
 
-import EventCard from "./cards/EventCard";
-import eventImage1 from "@/assets/events/event1.png";
-import eventImage2 from "@/assets/events/event2.png";
-import eventImage3 from "@/assets/events/event3.png";
+import EventCard from "@/components/cards/event-card";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import FadeInSection from "@/Animations/FadeInSection";
@@ -11,9 +8,36 @@ import FadeInSection from "@/Animations/FadeInSection";
 const Events = () => {
   const [isVisible, setIsVisible] = useState(false);
   const events = [
-    { image: eventImage1 },
-    { image: eventImage2 },
-    { image: eventImage3 },
+    {
+      id: 1,
+      title: "Startup Sprint",
+      image: "/events/startup-sprint.png",
+      desc: "Showcase your startup ideas",
+      date: "",
+      location: "Online",
+      money: "Free",
+      link: "https://lu.ma/ai3i02qx",
+    },
+    {
+      id: 2,
+      title: "From idea to impact",
+      image: "/events/impact.png",
+      desc: "Github",
+      date: "",
+      location: "Online",
+      money: "Free",
+      link: "https://lu.ma/ty6u5nz0",
+    },
+    {
+      id: 3,
+      title: "AI-DRIVEN FULL STACK DEV. WORKSHOP",
+      image: "/events/workshop.png",
+      desc: "",
+      date: "31st May, 2025",
+      location: "Bhawwan Talkies, Agra",
+      money: "Free",
+      link: "https://lu.ma/721l5jp1",
+    },
   ];
 
   useEffect(() => {
@@ -61,8 +85,8 @@ const Events = () => {
       </FadeInSection>
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 md:grid-cols-1 w-full max-w-6xl  ">
-        {events.map((event, index) => (
-          <EventCard key={index} image={event.image} index={index} />
+        {events.map((event) => (
+          <EventCard key={event.id} card={event} />
         ))}
       </div>
 
