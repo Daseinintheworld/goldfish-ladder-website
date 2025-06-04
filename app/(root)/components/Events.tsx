@@ -64,7 +64,7 @@ const Events = () => {
       className="max-w-6xl mx-auto mt-20 md:mt-64 px-4 md:px-6 ]"
     >
       <FadeInSection>
-        <div className="mb-20">
+        <div className="mb-5">
           <motion.h2
             className="text-4xl md:text-6xl  font-bold mb-4 md:mb-7 md:text-center text-center lg:text-left"
             initial={{ opacity: 0, x: -20 }}
