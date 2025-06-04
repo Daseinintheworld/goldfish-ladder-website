@@ -2,7 +2,7 @@
 
 "lucide-react"; // Ensure this file uses named exports
 import { motion } from "motion/react"; // Ensure this file uses named exports
-import EventCard from "./event-card/event-card";
+import EventCard from "@/components/cards/event-card";
 
 export default function EventsPage() {
   const activeEvents = [
