@@ -19,11 +19,11 @@ const CredentialsSignInForm = () => {
     const { pending } = useFormStatus();
 
     return (
-      <div className="mt-8 w-full col-span-3">
+      <div className="mt-5 mb-2 w-full col-span-3">
         <button
           disabled={pending}
           type="submit"
-          className="w-full bg-[#FFB32C] text-white text-5xl font-medium font-bebas py-2 lg:py-3 rounded-2xl shadow-lg  hover:bg-[#ffd07f] transition-colors mb-7 mt-11 "
+          className="w-full bg-[#FFB32C] text-white text-5xl font-medium font-bebas py-2 lg:py-3 rounded-2xl shadow-lg  hover:bg-[#ffd07f] transition-colors mb-2 mt-5 "
         >
           {pending ? "Signing In..." : "Sign In"}
         </button>
@@ -32,9 +32,9 @@ const CredentialsSignInForm = () => {
   };
 
   return (
-    <div className="relative bg-orange-50 rounded-lg  w-full max-w-[1040px] mx-[30px] animate-slide-up border-[#854836] border-[2px]">
-      <div className="pt-[20px] flex  flex-col justify-center items-center w-[90%] md:w-[80%] mx-auto">
-        <h1 className="text-5xl font-bebas  font-medium mt-2 mb-19 text-center text-black">
+    <div className="relative bg-orange-50 rounded-lg  w-full max-w-[1040px] sm:mx-[30px] mx-[20px] animate-slide-up border-[#854836] border-[2px]  sm:mt-4 mt-7">
+      <div className="pt-[20px] flex  flex-col justify-center items-center w-[80%] mx-auto">
+        <h1 className="text-5xl font-bebas  font-medium mt-1 mb-10 text-center text-black">
           LOGIN
         </h1>
 
@@ -43,13 +43,13 @@ const CredentialsSignInForm = () => {
           <div className="flex flex-col items-center w-full max-w-[800px]">
             <form
               action={action}
-              className="grid md:mx-[15px] mx-[0] grid-cols-3 gap-y-14 gap-x-6 w-[90%] w-max-3xl"
+              className="grid md:mx-[15px] mx-[0] grid-cols-3 gap-y-5 gap-x-6 w-[90%] max-w-3xl"
             >
               <input type="hidden" name="callbackUrl" value={callbackUrl} />
               {/* EMAIL field */}
               <label
                 htmlFor="email"
-                className="col-span-1 flex items-center md:text-[25px] text-[17px] font-[400] font-bebas"
+                className="col-span-1 flex items-center sm:text-[25px] text-[17px] font-[400] font-bebas"
               >
                 E-MAIL:
               </label>
@@ -61,14 +61,14 @@ const CredentialsSignInForm = () => {
                   placeholder="Enter Email Address"
                   required
                   autoComplete="email"
-                  className="w-full px-4 py-2 border-2 border-orange-300 bg-white rounded-2xl"
+                  className="w-full px-4 py-2 border-2 border-orange-300 bg-white rounded-2xl placeholder:text-sm"
                 />
               </div>
 
               {/* PASSWORD field */}
               <label
                 htmlFor="password"
-                className="col-span-1 flex items-center md:text-[25px] text-[17px] font-[400] font-bebas"
+                className="col-span-1 flex items-center sm:text-[25px] text-[19px] font-[400] font-bebas"
               >
                 PASSWORD:
               </label>
@@ -80,7 +80,7 @@ const CredentialsSignInForm = () => {
                   placeholder="Enter Password"
                   required
                   autoComplete="password"
-                  className="w-full px-4 py-2 border-2 border-orange-300 bg-white rounded-2xl"
+                  className="w-full px-4 py-2 border-2 border-orange-300 bg-white rounded-2xl placeholder:text-sm" 
                 />
               </div>
 
@@ -108,7 +108,7 @@ const CredentialsSignInForm = () => {
 
               <Link
                 href={"/sign-up"}
-                className="text-lg font-bebas md:text-xl lg:text-2xl font-medium mb-12 text-[#854836]"
+                className="text-lg font-bebas md:text-[22px] lg:text-2xl font-medium mb-12 text-[#854836]"
               >
                 Sign Up
               </Link>

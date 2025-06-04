@@ -12,8 +12,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="container mx-auto px-4 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white shadow-md w-full  flex">
+      <div
+  className="
+    w-full mx-auto px-4 flex items-center justify-between py-4 max-w-full sm:max-w-[42rem] md:max-w-[56rem] lg:max-w-[70rem] xl:max-w-[80rem] 2xl:max-w-[96rem]
+  "
+>
         <div className="flex-start">
           <Link href={"/"} className="flex-start">
             <Image

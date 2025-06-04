@@ -16,16 +16,16 @@ const SignInForm = async (props: {
   }
 
   return (
-    <div className="container mx-auto py-8 px-10 max-w-7xl flex flex-col items-center animate-fade-in">
+    <div className="container mx-auto pt-2 px-10 max-w-lg flex flex-col items-center animate-fade-in ">
       {/* Logo */}
-      <div className="text-center mb-4 lg:mb-8">
+      <div className="text-center sm:mt-3 mt-5  mb-2">
         <Link href="/">
           <Image
             src={image}
             alt="GoldFish Ladder"
-            width={876}
-            height={400}
-            className=" h-auto mx-auto mb-4 animate-slide-down"
+            width={676}
+            height={100}
+            className=" h-auto mx-auto  animate-slide-down"
           />
         </Link>
       </div>

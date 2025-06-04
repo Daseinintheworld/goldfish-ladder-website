@@ -5,52 +5,114 @@ import In from "@/assets/events/VectorIn.png";
 import insta from "@/assets/events/vectorInsta.png";
 
 
+
+  const social_media = [
+    {
+      id: 1,
+      title: "linkedin",
+      link: "https://www.linkedin.com/company/goldfish-ladder/posts/?feedView=all",
+      
+
+    },
+    {
+     id: 2,
+      title: "instagram",
+      link: "goldfishladder",
+
+
+    },
+    {
+      id: 3,
+      title: "mail",
+      link: "goldfishladder@gmail.com",
+      
+
+    },
+  ];
+
+
 const Footer = () => {
   return (
     <footer className="bg-[#6B3F2D] h-auto w-full flex flex-col items-center justify-center text-white m-auto pt-[45px] md:px-[10%] sm:px-[10px] overflow-hidden">
      
      <div className="">
      <div className="w-full flex justify-center items-center ">
-        <div className="flex flex-col justify-center items-center min-w-[170px] ">
+        <div className="flex flex-col justify-center items-center min-w-[170px]  ">
           {/* Use the Image component */}
-          <Image
-        src={fishSquare}
-        alt="Fish Square Logo"
-        width={550}
-        height={200}
+          <div className="relative mb-[30px] w-[100px] md:w-[190px] sm:w-[130px]">
+    <Image
+      src={fishSquare}
+      alt="Fish Square Logo"
+      width={550}
+      height={200}
+      className="object-contain w-[100px] md:w-[190px] sm:w-[130px]"
+    />
+    <div className="absolute inset-0 bg-[#6B3F2D] opacity-80 z-10 flex items-center justify-center">
+      {/* You can put content here if you want, or leave it empty for just the overlay */}
+    </div>
+  </div>
 
-        className=" pb-[30px] object-contain  w-[110px] md:w-[200px] sm:w-[140px]"
-      />
+
           <div className="text-center w-[110px] md:w-[200px] sm:w-[144px] text-[14px] md:text-[16px] sm:text-[14px] ">
             <p>Helping high schoolers launch their first startup.</p>
 
             <div className="flex justify-around mt-[30px] gap-3">
+              
               <div>
-                <Image
-                  src={In}
-                  alt="Fish Square Logo"
-                  width={60}
-                  height={60}
-                  className="object-contain  w-[40px] md:w-auto sm:w-[40px]"
-                />
+                  <a
+                      href={social_media[0].link}
+                      target="_blank"
+                      tabIndex={0}
+                      aria-label={`Go to ${social_media[0].title} event page`}
+                    >
+                      <Image
+                        src={In}
+                        alt="Fish Square Logo"
+                        width={60}
+                        height={60}
+                        className="object-contain w-[40px] md:w-auto sm:w-[40px]"
+                      />
+                  </a>
+
+
+
+              </div>
+
+              <div>
+                    <a
+                      href={social_media[1].link}
+                      target="_blank"
+                      tabIndex={0}
+                      aria-label={`Go to ${social_media[1].title} event page`}
+                    >
+
+                        <Image
+                      src={insta}
+                      alt="Fish Square Logo"
+                      width={60}
+                      height={60}
+                      className="object-contain w-[40px] md:w-auto sm:w-[40px]"
+                    />
+                    </a>
+
               </div>
               <div>
-                <Image
-                  src={insta}
-                  alt="Fish Square Logo"
-                  width={60}
-                  height={60}
-                  className="object-contain w-[40px] md:w-auto sm:w-[40px]"
-                />
-              </div>
-              <div>
-                <Image
-                  src={mail}
-                  alt="Fish Square Logo"
-                  width={60}
-                  height={60}
-                  className="object-contain w-[40px] md:w-auto sm:w-[40px]"
-                />
+
+                    <a
+                      href={social_media[2].link}
+                      target="_blank"
+                      tabIndex={0}
+                      aria-label={`Go to ${social_media[2].title} event page`}
+                    >
+
+                            <Image
+                          src={mail}
+                          alt="Fish Square Logo"
+                          width={60}
+                          height={60}
+                          className="object-contain w-[40px] md:w-auto sm:w-[40px]"
+                        />
+                    </a>
               </div>
             </div>
           </div>

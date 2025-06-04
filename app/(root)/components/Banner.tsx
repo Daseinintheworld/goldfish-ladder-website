@@ -54,24 +54,20 @@ const Banner = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-            >
+            >                
+
               They told us to wait.
-              <br />
               Wait until we&apos;re older. Smarter. More “ready.” But we were
               done waiting.
-              <br />
               Goldfish Ladder was built by students who were tired of seeing
               incredible teenage ideas go unheard. We created a space where high
               schoolers could pitch real startups, get funded, and find mentors
               who actually believe in them.
-              <br />
-              Because why shouldn&apos;t a 16-year-old change the world?We
+              Because why shouldn&apos;t a 16-year-old change the world? We
               called it Goldfish Ladder—because even if the world thinks we
               don&apos;t belong on the climb, we&apos;re doing it anyway.
-              <br />
               Ready to build something real?
-              <br />
-              Explore. Dream. Pitch.This is your stage.
+              Explore. Dream. Pitch. This is your stage.
             </motion.p>
             <motion.div
               className="flex items-center justify-center md:justify-start sm:mx-auto"
