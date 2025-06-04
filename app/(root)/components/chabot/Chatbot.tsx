@@ -1,11 +1,10 @@
-import { Rocket, Bot } from "lucide-react"; 
-import { useChat } from "@ai-sdk/react"; 
+import Image from "next/image";
+import { ArrowUp } from "lucide-react";
+import { useChat } from "@ai-sdk/react";
 import { useEffect, useRef } from "react";
-import chatgpt from "@/assets/chatgpt.png";
 
 const Chatbot = () => {
-  const { messages, input, handleInputChange, handleSubmit, status } =
-    useChat();
+  const { messages, input, handleInputChange, handleSubmit, status } = useChat();
   const chatRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -15,83 +14,104 @@ const Chatbot = () => {
   }, [messages]);
 
   return (
-    <div className="chat-container shadow-lg rounded-lg p-4 text-white flex flex-col h-full mx-[30px] sm:mx-[60px] lg:mx-[0px] max-w-4xl">
-      <div className="chat-header flex items-center gap-2 animate-fade-in">
-        <Rocket className="text-yellow-300 animate-bounce" />
-        <h4 className="mb-0 text-lg font-bold text-center sm:text-left">
-          Cofounder AI Chat
-        </h4>
-      </div>
+    <div className="h-full max-w-4xl mx-auto px-4 py-6 flex flex-col rounded-xl shadow-xl bg-[#fff7f3]">
 
+      {/* Chat Area */}
       <div
-        className="chat-messages flex-1 relative overflow-y-auto space-y-4 md:p-2 p-[0px]  rounded-lg animate-slide-up mx-auto max-w-full sm:max-w-4xl  opacity-99"
         ref={chatRef}
-        style={{
-          backgroundImage: `url(${chatgpt.src})`, 
-          backgroundSize: "cover", 
-          backgroundPosition: "center", 
-        }}
+        className="flex-1 overflow-y-auto space-y-4 p-4 bg-white rounded-xl border border-[#FCD699BF]"
       >
-        {/* Chat Content */}
-        <div className="relative z-10">
-          <div className="message-row animate-fade-in">
-            <div className="avatar p-2">
-              <Bot className="w-6 h-6" />
-            </div>
-            <div className="message-bubble p-3">
+        {/* Intro Message */}
+        <div className="flex gap-2 items-start">
+          <div className="w-6 h-6 rounded-full overflow-hidden">
+            <Image src="/aiCoFounder/bot.png" alt="Bot" width={24} height={24} />
+          </div>
+          <div className="px-4 py-2 rounded-2xl shadow text-sm bg-[#FCD699BF] text-gray-800">
+            <p>
               Hey there! I&apos;m your AI cofounder. What business challenge are we tackling today?
+            </p>
+          </div>
+        </div>
+
+        {/* Chat Messages */}
+        {messages.map((message) => (
+          <div
+            key={message.id}
+            className={`flex items-start gap-2 ${message.role === "user" ? "justify-end" : ""}`}
+          >
+            {message.role !== "user" && (
+              <div className="w-6 h-6 rounded-full overflow-hidden">
+                <Image src="/aiCoFounder/bot.png" alt="Bot" width={24} height={24} />
+              </div>
+            )}
+
+            {message.role === "user" && (
+              <div className="w-6 h-6 rounded-full overflow-hidden">
+                <Image src="/aiCoFounder/user.png" alt="User" width={24} height={24} />
+              </div>
+            )}
+
+            <div
+              className={`px-4 py-2 rounded-2xl shadow max-w-sm text-sm transition-all duration-200 ease-in-out ${
+                message.role === "user"
+                  ? "bg-[#FCD699BF] text-gray-900"
+                  : "bg-[#FCD699BF] text-gray-900"
+              }`}
+            >
+              {message.content}
             </div>
           </div>
-          {messages.map((message) => (
-            <div
-              key={message.id}
-              className={`message-row flex items-start gap-2 ${
-                message.role === "user" ? "justify-end" : ""
-              } animate-fade-in`}
-            >
-              <div
-                className={`avatar rounded-full p-2`}
-              >
-                {message.role === "user" ? "U" : <Bot className="w-6 h-6" />}
-              </div>
-              <div
-                className={`message-bubble  p-3`}
-              >
-                {message.content}
-              </div>
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
 
+      {/* Error Message */}
       {status === "error" && (
-        <p className="text-red-500 mt-2 animate-pulse text-center">
+        <p className="text-red-500 mt-2 text-center animate-pulse text-sm">
           There seems to be an error.
         </p>
       )}
 
+      {/* Input Bar */}
       <form
         onSubmit={handleSubmit}
-        className="chat-input-area flex items-center gap-2 mt-4 animate-fade-in"
+        className="mt-4 flex items-center gap-2 bg-white p-3 rounded-xl shadow border border-[#f3d5b3]"
       >
         <input
           name="prompt"
           id="user-input"
           type="text"
-          className="form-control flex-1 px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-300 text-sm sm:text-base"
-          placeholder="Type your message..."
+          className="flex-1 px-3 py-2 rounded-lg border border-[#f3d5b3] focus:outline-none focus:ring-2 focus:ring-[#FCD699BF] text-sm bg-[#FCD699BF]"
+          placeholder="Ask Anything..."
           autoComplete="off"
           value={input}
           onChange={handleInputChange}
           disabled={status !== "ready"}
           required
         />
+
+        {/* Mic Button */}
+        <button
+          type="button"
+          className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          onClick={() => {
+            alert("Voice input coming soon!");
+          }}
+        >
+          <Image
+            src="/aiCoFounder/voice.png"
+            alt="Voice"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+        </button>
+
+        {/* Send Button */}
         <button
           type="submit"
-          id="send-btn"
-          className="btn bg-yellow-300 text-black px-4 py-2 sm:px-5 sm:py-3 rounded-lg shadow-md transition-transform transform hover:scale-105 text-sm sm:text-base"
+          className="p-2 rounded-lg bg-[#854836] hover:bg-[#6e392c] transition-colors"
         >
-          Send
+          <ArrowUp className="w-5 h-5 text-white" />
         </button>
       </form>
     </div>
