@@ -26,7 +26,7 @@ const Chatbot = () => {
           <div className="w-6 h-6 rounded-full overflow-hidden">
             <Image src="/mascot.svg" alt="Bot" width={24} height={24} />
           </div>
-          <div className="px-4 py-2 rounded-2xl shadow text-sm bg-[#FCD699BF] text-gray-800">
+          <div className="px-4 py-2 rounded-2xl shadow text-xs md:text-sm bg-[#FCD699BF] text-gray-800">
             <p>
               Hey there! I&apos;m your AI cofounder. What business challenge are
               we tackling today?
@@ -60,7 +60,7 @@ const Chatbot = () => {
             )}
 
             <div
-              className={`px-4 py-2 rounded-2xl shadow max-w-sm text-sm transition-all duration-200 ease-in-out ${
+              className={`px-4 py-2 rounded-2xl shadow max-w-sm text-xs md:text-sm transition-all duration-200 ease-in-out ${
                 message.role === "user"
                   ? "bg-[#FCD699BF] text-gray-900"
                   : "bg-[#FCD699BF] text-gray-900"
@@ -88,7 +88,7 @@ const Chatbot = () => {
           name="prompt"
           id="user-input"
           type="text"
-          className="flex-1 px-3 py-2 rounded-lg border border-[#f3d5b3] focus:outline-none focus:ring-2 focus:ring-[#FCD699BF] text-sm bg-[#FCD699BF]"
+          className="w-2/3 md:w-full flex-1 px-3 py-2 rounded-lg border border-[#f3d5b3] focus:outline-none focus:ring-2 focus:ring-[#FCD699BF] text-sm bg-[#FCD699BF]"
           placeholder="Ask Anything..."
           autoComplete="off"
           value={input}
@@ -100,7 +100,7 @@ const Chatbot = () => {
         {/* Mic Button */}
         <button
           type="button"
-          className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          className="p-2 hidden md:inline rounded-lg hover:bg-gray-100 transition-colors"
           onClick={() => {
             alert("Voice input coming soon!");
           }}
@@ -122,7 +122,7 @@ const Chatbot = () => {
           {status === "submitted" ? (
             <Loader className="w-4 h-4 animate-spin" />
           ) : (
-            <ArrowUp className="w-5 h-5 text-white" />
+            <ArrowUp className="w-4 h-4 text-white" />
           )}
         </button>
       </form>
