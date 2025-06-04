@@ -32,12 +32,12 @@ const SignUpForm = async (props: {
         </Link>
       </div>
 
-      <div className="bg-primaryColor/10 rounded-lg animate-slide-up border-[#854836] border">
+      <div className="bg-primaryColor/10 mx-2 rounded-lg animate-slide-up border-[#854836] border">
         <h1 className="text-5xl font-bebas font-medium my-5 text-center">
           Sign Up
         </h1>
         {/* Form */}
-        <div className="px-32">{<CredentialsSignUpForm />}</div>
+        <div className="px-2 md:px-32">{<CredentialsSignUpForm />}</div>
         {/* Divider */}
         <div className="flex w-full justify-center items-center">
           <div className="w-[40%] border border-black"></div>

@@ -35,7 +35,10 @@ const CredentialsSignUpForm = () => {
       <input type="hidden" name="callbackUrl" value={callbackUrl} />
       <div className="grid grid-cols-3 gap-4 items-center">
         {/* NAME field */}
-        <label htmlFor="name" className="col-span-1 text-3xl font-bebas">
+        <label
+          htmlFor="name"
+          className="col-span-1 text-xl md:text-3xl font-bebas"
+        >
           FULL NAME:
         </label>
         <div className="col-span-2">
@@ -51,7 +54,10 @@ const CredentialsSignUpForm = () => {
         </div>
 
         {/* EMAIL field */}
-        <label htmlFor="email" className="col-span-1 text-3xl font-bebas">
+        <label
+          htmlFor="email"
+          className="col-span-1 text-xl md:text-3xl font-bebas"
+        >
           E-MAIL:
         </label>
         <div className="col-span-2">
@@ -67,7 +73,10 @@ const CredentialsSignUpForm = () => {
         </div>
 
         {/* PASSWORD field */}
-        <label htmlFor="password" className="col-span-1 text-3xl font-bebas">
+        <label
+          htmlFor="password"
+          className="col-span-1 text-xl md:text-3xl font-bebas"
+        >
           PASSWORD:
         </label>
         <div className="col-span-2">
@@ -85,7 +94,7 @@ const CredentialsSignUpForm = () => {
         {/* CONFIRM PASSWORD field */}
         <label
           htmlFor="confirmPassword"
-          className="col-span-1 text-3xl font-bebas"
+          className="col-span-1 text-xl md:text-3xl font-bebas"
         >
           CONFIRM PASSWORD:
         </label>

@@ -18,7 +18,7 @@ const SignInForm = async (props: {
   }
 
   return (
-    <div className="max-w-[1000px] mx-auto mt-10 animate-fade-in">
+    <div className="max-w-[1000px] mx-auto my-10 animate-fade-in">
       {/* Logo */}
       <div className="sm:mt-3 mt-5 mb-2">
         <Link href="/">
@@ -31,12 +31,12 @@ const SignInForm = async (props: {
           />
         </Link>
       </div>
-      <div className="bg-primaryColor/10 rounded-lg animate-slide-up border-[#854836] border">
+      <div className="bg-primaryColor/10 rounded-lg animate-slide-up border-[#854836] border  mx-2">
         <h1 className="text-5xl font-bebas font-medium my-10 text-center">
           LOGIN
         </h1>
         {/* Form */}
-        <div className="px-32">{<CredentialsSignInForm />}</div>
+        <div className="px-2 md:px-32 ">{<CredentialsSignInForm />}</div>
         {/* Divider */}
         <div className="flex w-full justify-center items-center">
           <div className="w-[40%] border border-black"></div>

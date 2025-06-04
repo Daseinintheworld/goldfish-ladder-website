@@ -35,7 +35,10 @@ const CredentialsSignInForm = () => {
       <form action={action} className="grid grid-cols-3 gap-4 items-center">
         <input type="hidden" name="callbackUrl" value={callbackUrl} />
         {/* EMAIL field */}
-        <label htmlFor="email" className="col-span-1 text-3xl font-bebas">
+        <label
+          htmlFor="email"
+          className="col-span-1 text-2xl md:text-3xl font-bebas"
+        >
           E-MAIL:
         </label>
         <div className="col-span-2">
@@ -51,7 +54,10 @@ const CredentialsSignInForm = () => {
         </div>
 
         {/* PASSWORD field */}
-        <label htmlFor="password" className="col-span-1 text-3xl font-bebas">
+        <label
+          htmlFor="password"
+          className="col-span-1 text-2xl md:text-3xl font-bebas"
+        >
           PASSWORD:
         </label>
         <div className="col-span-2">
