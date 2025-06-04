@@ -46,14 +46,11 @@ const AboutUs = () => {
   ];
 
   return (
-    <section
-      id="about-section"
-      className="max-w-6xl mx-auto mt-12 md:mt-44 px-4 md:px-6"
-    >
+    <section id="about-section" className="max-w-6xl mx-auto mt-12 md:mt-44">
       <FadeInSection>
-        <div className="max-w-[740px] mx-auto mb-12 text-center">
+        <div className="max-w-3xl mx-auto mb-12 text-center">
           <motion.h2
-            className="text-4xl md:text-6xl font-bold mb-14"
+            className="text-4xl md:text-6xl font-bold mb-5"
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8 }}
@@ -61,26 +58,24 @@ const AboutUs = () => {
             About Us
           </motion.h2>
           <motion.p
-            className="mx-auto text-sm md:text-base px-[40px]"
+            className="mx-auto text-sm md:text-base px-4"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Goldfish Ladder is a launchpad for high school innovators.
-            <br />
-            We empower teenage founders to take their first steps into
+            Goldfish Ladder is a launchpad for high school innovators. We
+            empower teenage founders to take their first steps into
             entrepreneurship—with tools, mentorship, and real funding. From idea
             to execution, our platform provides AI support, expert guidance, and
-            opportunities to pitch in our Mini Shark Tank.
-            <br />
-            Our mission is simple: make building a startup as accessible as
-            starting a School project.
+            opportunities to pitch in our Mini Shark Tank. Our mission is
+            simple: make building a startup as accessible as starting a School
+            project.
           </motion.p>
         </div>
       </FadeInSection>
 
       <motion.div
-        className="bg-primaryColor px-2 py-6 md:px-16 md:py-11 rounded-3xl   md:mx-[80px]   "
+        className="bg-primaryColor px-2 py-6 md:px-16 md:py-11 rounded-3xl mx-2 md:mx-20"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={
           isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
