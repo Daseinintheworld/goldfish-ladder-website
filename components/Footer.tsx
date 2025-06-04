@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#6B3F2D] flex flex-col items-center justify-center gap-4 text-white m-auto pt-11 sm:px-2">
-      <div className="flex justify-between items-center gap-2 md:gap-40">
+      <div className="flex justify-between items-center flex-col md:flex-row gap-10 md:gap-40">
         <div className="flex flex-col justify-center items-center">
           <div className="mb-8">
             <Image
@@ -99,9 +99,7 @@ const Footer = () => {
 
         <div className="flex flex-row gap-[10px] md:gap-[50px] sm:gap-[20px] ">
           <div className="flex flex-col justify-center items-center md:w-[200px] sm:w-[130px] w-[130px] ">
-            <h2 className="mb-[20px] font-bold md:text-xl sm:text-[15px] text-[12px] ">
-              Company
-            </h2>
+            <h2 className="mb-[20px] font-bold text-xl">Company</h2>
             <div className="md:text-lg flex flex-col justify-center items-center">
               {navLinks.map((link) => (
                 <Link key={link.name} href={link.href}>
@@ -111,11 +109,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-[100px] sm:w-[130px] text-sm">
-            <h2 className="mb-[29px] font-bold md:text-xl sm:text-[15px] text-[12px]">
-              Support
-            </h2>
-            <div className="md:text-[16px] sm:text-[14px] text-[12px] flex flex-col ">
+          <div className="flex flex-col text-center">
+            <h2 className="mb-[29px] font-bold text-xl">Support</h2>
+            <div className="flex flex-col ">
               <p>Help Center</p>
               <p>FAQ</p>
               <p>Privacy Policy</p>
@@ -125,7 +121,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-sm sm:text-base italic p-4">
+      <p className="text-sm sm:text-base italic p-4 text-center">
         Copyright © 2025 by Goldfish Ladder. All rights reserved.
       </p>
     </footer>
