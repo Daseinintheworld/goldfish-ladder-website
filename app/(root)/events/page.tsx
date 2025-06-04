@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { Calendar, Clock, MapPin } from "lucide-react"; // Ensure this file uses named exports
+"lucide-react"; // Ensure this file uses named exports
 import { motion } from "motion/react"; // Ensure this file uses named exports
+import EventCard from "./event-card/event-card";
 
 export default function EventsPage() {
   const activeEvents = [
@@ -14,8 +14,7 @@ export default function EventsPage() {
       date: "",
       location: "Online",
       money: "Free",
-      link: "https://lu.ma/ai3i02qx", 
-
+      link: "https://lu.ma/ai3i02qx",
     },
     {
       id: 2,
@@ -25,9 +24,7 @@ export default function EventsPage() {
       date: "",
       location: "Online",
       money: "Free",
-      link: "https://lu.ma/ty6u5nz0", 
-
-
+      link: "https://lu.ma/ty6u5nz0",
     },
     {
       id: 3,
@@ -37,41 +34,42 @@ export default function EventsPage() {
       date: "31st May, 2025",
       location: "Bhawwan Talkies, Agra",
       money: "Free",
-      link: "https://lu.ma/721l5jp1", 
-
+      link: "https://lu.ma/721l5jp1",
     },
   ];
 
   const exploreEvents = [
-  {
-    title: "Fintech Mixer",
-    image: "/events/fintech.png",
-    desc: "WTFraud",
-    date: "12th June 2025",
-    location: "Mumbai, Maharashtra",
-    time: "6:30 PM",
-    link: "https://lu.ma/nichrswq", 
-  },
-  {
-    title: "Powering Talent Acquisition Transformation with Gen AI",
-    image: "/events/talent.png",
-    desc: "TeamLease Digital",
-    date: "22nd June, 2025",
-    location: "Mumbai, Maharashtra",
-    time: "https://lu.ma/rw49emp4",
-    // No link
-  },
-  {
-    title: "AI & Machine Learning",
-    image: "/events/ml.png",
-    desc: "Venance Castelino",
-    date: "7th June, 2025",
-    location: "Vasai-Virar, Maharashtra",
-    time: "10:00 AM - 1:00 PM",
-    link: "https://lu.ma/via72r1r", // Another example link
-  },
-];
-
+    {
+      id: 1,
+      title: "Fintech Mixer",
+      image: "/events/fintech.png",
+      desc: "WTFraud",
+      date: "12th June 2025",
+      location: "Mumbai, Maharashtra",
+      time: "6:30 PM",
+      link: "https://lu.ma/nichrswq",
+    },
+    {
+      id: 2,
+      title: "Powering Talent Acquisition Transformation with Gen AI",
+      image: "/events/talent.png",
+      desc: "TeamLease Digital",
+      date: "22nd June, 2025",
+      location: "Mumbai, Maharashtra",
+      time: "",
+      link: "https://lu.ma/rw49emp4",
+    },
+    {
+      id: 3,
+      title: "AI & Machine Learning",
+      image: "/events/ml.png",
+      desc: "Venance Castelino",
+      date: "7th June, 2025",
+      location: "Vasai-Virar, Maharashtra",
+      time: "10:00 AM - 1:00 PM",
+      link: "https://lu.ma/via72r1r",
+    },
+  ];
 
   return (
     <div className="flex flex-col items-center mx-2 md:mx-9 my-9">
@@ -133,188 +131,31 @@ export default function EventsPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
-          {activeEvents.map((item, i) => {
-      const CardContent = (
-        <motion.div
-          className="flex flex-col w-full max-w-xs mx-auto shadow-md pb-[30px] rounded-b-md mt-[50px] bg-white min-h-[478px]"
-
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: i * 0.2 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          {/* Image container */}
-              <div className="relative w-full">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={500}
-                  height={600}
-                  className="object-contain max-w-full h-auto"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]">
-                  <div className="flex flex-row items-center opacity-80 mt-2 text-white">
-                    <div className="mr-2">
-                      <Calendar size={22} strokeWidth={1.4} />
-                    </div>
-                    <span className="font-medium text-sm capitalize">
-                      {item.date}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Event Details */}
-              <div className="w-full pl-[10px] h-[40%]">
-                <div className="flex flex-col mb-1">
-                  <h1 className="text-3xl font-bold text-black mt-1">
-                    {item.title}
-                  </h1>
-                  <p className="text-md font-medium text-black">{item.desc}</p>
-                </div>
-
-                <div className="flex flex-row items-center opacity-80 mt-2">
-                  <div className="mr-3">
-                    <MapPin size={22} strokeWidth={1.4} />
-                  </div>
-                  <span className="font-medium text-sm capitalize">
-                    {item.location}
-                  </span>
-                </div>
-
-                <div className="flex flex-row items-center mt-4">
-                  <div className="mr-3">
-                    <Image
-                      src="/events/MoneyWavy.png"
-                      alt="Money Icon"
-                      width={22}
-                      height={22}
-                      className="object-contain max-w-full h-auto"
-                    />
-                  </div>
-                  <span className="font-medium text-sm">{item.money}</span>
-                </div>
-              </div>
-
-        </motion.div>
-      );
-
-      return item.link ? (
-        <a
-          key={i}
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block focus:outline-yellow-400"
-          tabIndex={0}
-          aria-label={`Go to ${item.title} event page`}
-        >
-          {CardContent}
-        </a>
-      ) : (
-        <div key={i}>{CardContent}</div>
-      );
-    })}
+          {activeEvents.map((item) => (
+            <EventCard key={item.id} card={item} />
+          ))}
         </div>
       </section>
 
-
-          <section className="mt-9 max-w-[1047px]">
-  <motion.div
-    className="flex flex-col w-full mt-10"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.2 }}
-    transition={{ duration: 0.8 }}
-  >
-    <h1 className="text-3xl md:text-5xl font-bold mb-4">
-      Explore Events
-    </h1>
-  </motion.div>
-
-  <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
-    {exploreEvents.map((item, i) => {
-      const CardContent = (
+      <section className="mt-9 max-w-[1047px]">
         <motion.div
-          className="flex flex-col w-full max-w-xs mx-auto shadow-md pb-[30px] rounded-b-md mt-[50px] bg-white min-h-[478px]"
-
+          className="flex flex-col w-full mt-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: i * 0.2 }}
-          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.8 }}
         >
-          {/* Image container */}
-          <div className="relative w-full">
-            <Image
-              src={item.image}
-              alt={item.title}
-              width={500}
-              height={600}
-              className="object-contain max-w-full h-auto"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]">
-              <div className="flex flex-row items-center opacity-80 mt-2 text-white">
-                <div className="mr-2">
-                  <Calendar size={22} strokeWidth={1.4} />
-                </div>
-                <span className="font-medium text-sm capitalize">
-                  {item.date}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Event Details */}
-          <div className="w-full pl-[10px] h-[40%]">
-            <div className="flex flex-col mb-1">
-                  <h1 className="text-xl font-bold mt-1">{item.title}</h1>
-                  <p className="text-md font-medium">{item.desc}</p>
-
-            </div>
-
-            <div className="flex flex-row items-center opacity-80 mt-2">
-              <div className="mr-3">
-                <MapPin size={22} strokeWidth={1.4} />
-              </div>
-              <span className="font-medium text-sm capitalize">
-                {item.location}
-              </span>
-            </div>
-
-            <div className="flex flex-row items-center mt-4">
-              <div className="mr-3">
-                <Clock size={22} />
-              </div>
-              <span className="font-medium text-sm text-black">
-                {item.time}
-              </span>
-            </div>
-          </div>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            Explore Events
+          </h1>
         </motion.div>
-      );
 
-      // If link exists, wrap the card in <a>
-      return item.link ? (
-        <a
-          key={i}
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block focus:outline-yellow-400"
-          tabIndex={0}
-          aria-label={`Go to ${item.title} event page`}
-        >
-          {CardContent}
-        </a>
-      ) : (
-        <div key={i}>{CardContent}</div>
-      );
-    })}
-  </div>
-</section>
-
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
+          {exploreEvents.map((item) => (
+            <EventCard key={item.id} card={item} />
+          ))}
+        </div>
+      </section>
 
       {/* Call to Action */}
       <section className="bg-primaryColor py-20 max-w-[1047px] rounded-xl mt-24 md:px-12">
@@ -334,128 +175,14 @@ export default function EventsPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
-          {activeEvents.map((item, i) => (
-            <motion.div
-              key={item.id}
-              className="flex flex-col w-full max-w-xs mx-auto shadow-md pb-[30px] rounded-md mt-[50px] bg-white"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              {/* Image container */}
-              <div className="relative w-full">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={500}
-                  height={600}
-                  className="object-contain max-w-full h-auto"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]">
-                  <div className="flex flex-row items-center opacity-80 mt-2 text-white">
-                    <div className="mr-2">
-                      <Calendar size={22} strokeWidth={1.4} />
-                    </div>
-                    <span className="font-medium text-sm capitalize">
-                      {item.date}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Event Details */}
-              <div className="w-full pl-[10px] h-[40%]">
-                <div className="flex flex-col mb-1">
-                  <h1 className="text-3xl font-bold mt-1">{item.title}</h1>
-                  <p className="text-md font-medium">{item.desc}</p>
-                </div>
-
-                <div className="flex flex-row items-center opacity-80 mt-2">
-                  <div className="mr-3">
-                    <MapPin size={22} strokeWidth={1.4} />
-                  </div>
-                  <span className="font-medium text-sm capitalize">
-                    {item.location}
-                  </span>
-                </div>
-
-                <div className="flex flex-row items-center mt-4">
-                  <div className="mr-3">
-                    <Image
-                      src="/events/MoneyWavy.png"
-                      alt="Money Icon"
-                      width={22}
-                      height={22}
-                      className="object-contain max-w-full h-auto"
-                    />
-                  </div>
-                  <span className="font-medium text-sm">{item.money}</span>
-                </div>
-              </div>
-            </motion.div>
+          {activeEvents.map((item) => (
+            <EventCard key={item.id} card={item} />
           ))}
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
-          {exploreEvents.map((item, i) => (
-            <motion.div
-              key={i}
-              className="flex flex-col w-full max-w-xs mx-auto shadow-md pb-[30px] rounded-b-md mt-[50px] bg-white"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              {/* Image container */}
-              <div className="relative w-full">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={500}
-                  height={600}
-                  className="object-contain max-w-full h-auto"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]">
-                  <div className="flex flex-row items-center opacity-80 mt-2 text-white">
-                    <div className="mr-2">
-                      <Calendar size={22} strokeWidth={1.4} />
-                    </div>
-                    <span className="font-medium text-sm capitalize">
-                      {item.date}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Event Details */}
-              <div className="w-full pl-[10px] h-[40%] text">
-                <div className="flex flex-col mb-1">
-                  <h1 className="text-xl font-bold mt-1">{item.title}</h1>
-                  <p className="text-md font-medium">{item.desc}</p>
-                </div>
-
-                <div className="flex flex-row items-center opacity-80 mt-2">
-                  <div className="mr-3">
-                    <MapPin size={22} strokeWidth={1.4} />
-                  </div>
-                  <span className="font-medium text-sm capitalize">
-                    {item.location}
-                  </span>
-                </div>
-
-                <div className="flex flex-row items-center mt-4">
-                  <div className="mr-3">
-                    <Clock className="text-bl" />
-                  </div>
-                  <span className="font-medium text-sm text-black">
-                    {item.time}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
+          {exploreEvents.map((item) => (
+            <EventCard key={item.id} card={item} />
           ))}
         </div>
       </section>
