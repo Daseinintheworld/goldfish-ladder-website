@@ -3,8 +3,36 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import FadeInSection from "@/Animations/FadeInSection";
+import Link from "next/link";
 
 export default function InternshipPage() {
+  const internships = [
+    {
+      title: "Wave",
+      description:
+        "Wave is a mental health tech startup dedicated to making emotional well-being more accessible through personalised, AI-driven support tools.",
+      image: "/internship/wave.avif",
+    },
+    {
+      title: "Project Clay",
+      description:
+        "Project Clay is a mentorship platform that connects high school students with near-peer mentors.",
+      image: "/internship/project-clay.png",
+    },
+    {
+      title: "Junior Economics Club",
+      description:
+        "The Junior Economic Club (JEC) is a student-led organisation dedicated to expanding high school students’ knowledge of economics.",
+      image: "/internship/je.avif",
+    },
+    {
+      title: "Finomic",
+      description:
+        "Finomic is a youth-led organization specializing in increasing financial literacy among the youth.",
+      image: "/internship/fin.avif",
+    },
+  ];
+
   return (
     <div className="pb-10">
       {/* Hero Section */}
@@ -58,32 +86,7 @@ export default function InternshipPage() {
         >
           {/* Internship Cards */}
           <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Wave",
-                description:
-                  "Wave is a mental health tech startup dedicated to making emotional well-being more accessible through personalised, AI-driven support tools.",
-                image: "/internship/wave.avif",
-              },
-              {
-                title: "Project Clay",
-                description:
-                  "Project Clay is a mentorship platform that connects high school students with near-peer mentors.",
-                image: "/internship/project-clay.png",
-              },
-              {
-                title: "Junior Economics Club",
-                description:
-                  "The Junior Economic Club (JEC) is a student-led organisation dedicated to expanding high school students’ knowledge of economics.",
-                image: "/internship/je.avif",
-              },
-              {
-                title: "Finomic",
-                description:
-                  "Finomic is a youth-led organization specializing in increasing financial literacy among the youth.",
-                image: "/internship/fin.avif",
-              },
-            ].map(({ title, description, image }, i) => (
+            {internships.map(({ title, description, image }, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 50 }}
@@ -93,24 +96,33 @@ export default function InternshipPage() {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="bg-white flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-16 py-8 md:py-12 rounded-none rounded-b-xl border-b-[15px] border-b-[#b17e11] text-black">
-                  <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-10">
-                    <div>
-                      <h3 className="font-bold text-[24px] md:text-[36px]">
-                        {title}
-                      </h3>
-                      <p className="mt-4 text-[16px] md:text-[20px] max-w-3xl">
-                        {description}
-                      </p>
+                  <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-10">
+                      <div>
+                        <h3 className="font-bold text-[24px] md:text-[36px]">
+                          {title}
+                        </h3>
+                        <p className="mt-4 text-[16px] md:text-[20px] max-w-3xl">
+                          {description}
+                        </p>
+                      </div>
+                      <div className="mt-6 md:mt-0 self-center md:self-auto">
+                        <Image
+                          src={image}
+                          alt={title}
+                          width={220}
+                          height={220}
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-6 md:mt-0 self-center md:self-auto">
-                    <Image
-                      src={image}
-                      alt={title}
-                      width={220}
-                      height={220}
-                      className="object-contain"
-                    />
+                    <Link
+                      target="_blank"
+                      href="https://docs.google.com/forms/d/e/1FAIpQLScu16FfFYR-CZpP51IfeMMbwZYxBz0R3ccqD60oeXx4kCELcg/viewform"
+                      className="bg-[#6B3F2D] text-white px-8 md:px-10 py-3 md:py-4 text-[20px] md:text-[24px] rounded-xl"
+                    >
+                      Apply Now
+                    </Link>
                   </div>
                 </div>
               </motion.div>
