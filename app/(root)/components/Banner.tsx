@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import FadeInSection from "@/Animations/FadeInSection";
+import Link from "next/link";
 
 const Banner = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -70,16 +71,18 @@ const Banner = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            <motion.button
-              className="bg-primaryColor text-[#6B3F2D] hover:bg-primaryColor/90 py-1 px-8 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-medium"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Ask AI
-            </motion.button>
+            <Link href="/ai-co-founder">
+              <motion.button
+                className="bg-primaryColor text-[#6B3F2D] hover:bg-primaryColor/90 py-1 px-8 md:py-3 md:px-9 text-xl md:text-3xl rounded-2xl font-medium"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Ask AI
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </FadeInSection>
