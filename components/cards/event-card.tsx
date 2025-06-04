@@ -33,7 +33,7 @@ const EventCard = ({ card }: { card: EventCardProps }) => {
             alt={card.title}
             width={500}
             height={600}
-            className="object-contain max-w-full h-auto"
+            className="object-contain w-full h-auto"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]">
             <div className="flex flex-row items-center opacity-80 mt-2 text-white">
@@ -50,7 +50,7 @@ const EventCard = ({ card }: { card: EventCardProps }) => {
         {/* Event Details */}
         <div className="w-full pl-[10px] h-[40%]">
           <div className="flex flex-col mb-1">
-            <h1 className="text-3xl font-bold text-black mt-1">{card.title}</h1>
+            <h1 className="text-2xl font-bold text-black mt-1">{card.title}</h1>
             <p className="text-md font-medium text-black">{card.desc}</p>
           </div>
 
