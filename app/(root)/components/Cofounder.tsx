@@ -51,7 +51,7 @@ const Cofounder = () => {
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <div className="text-center md:px-28">
+        <div className="text-center md:px-28 py-4">
           <h1 className="text-3xl md:text-8xl font-bold">Build With AI</h1>
           <p className="font-semibold text-lg md:text-2xl">
             Your ultimate guide to AI development tools and Frameworks
@@ -79,27 +79,32 @@ const Cofounder = () => {
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <motion.button
-          className="bg-primaryColor text-lg md:text-3xl font-bold py-3 px-4 md:py-7 md:px-8 rounded-md"
-          whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(0,0,0,0.2)" }}
-          whileTap={{ scale: 0.95 }}
-          animate={
-            isVisible
-              ? {
-                  boxShadow: [
-                    "0px 0px 0px rgba(0,0,0,0)",
-                    "0px 5px 15px rgba(0,0,0,0.3)",
-                    "0px 0px 0px rgba(0,0,0,0)",
-                  ],
-                }
-              : {}
-          }
-          transition={{
-            boxShadow: { duration: 3, repeat: Infinity, delay: 0.5 },
-          }}
-        >
-          Meet Your AI co-founder
-        </motion.button>
+        <Link href={"/ai-co-founder"}>
+          <motion.button
+            className="bg-primaryColor text-lg md:text-3xl font-bold py-3 px-4 md:py-7 md:px-8 rounded-md"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            animate={
+              isVisible
+                ? {
+                    boxShadow: [
+                      "0px 0px 0px rgba(0,0,0,0)",
+                      "0px 5px 15px rgba(0,0,0,0.3)",
+                      "0px 0px 0px rgba(0,0,0,0)",
+                    ],
+                  }
+                : {}
+            }
+            transition={{
+              boxShadow: { duration: 3, repeat: Infinity, delay: 0.5 },
+            }}
+          >
+            Meet Your AI co-founder
+          </motion.button>
+        </Link>
       </motion.div>
     </section>
   );
