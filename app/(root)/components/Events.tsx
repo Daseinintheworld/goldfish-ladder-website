@@ -64,24 +64,14 @@ const Events = () => {
       className="max-w-6xl mx-auto mt-20 md:mt-64 px-4 md:px-6 ]"
     >
       <FadeInSection>
-        <div className="mb-5">
-          <motion.h2
-            className="text-4xl md:text-6xl  font-bold mb-4 md:mb-7 md:text-center text-center lg:text-left"
-            initial={{ opacity: 0, x: -20 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{ duration: 0.8 }}
-          >
-            Events
-          </motion.h2>
-          <motion.p
-            className="font-[400] text-xl text-center md:text-left md:text-3xl  "
-            initial={{ opacity: 0 }}
-            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            lorem ipsum lorem ipsum
-          </motion.p>
-        </div>
+        <motion.h2
+          className="text-4xl md:text-6xl  font-bold mb-4 md:mb-7 md:text-center text-center lg:text-left"
+          initial={{ opacity: 0, x: -20 }}
+          animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+          transition={{ duration: 0.8 }}
+        >
+          Events
+        </motion.h2>
       </FadeInSection>
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 md:grid-cols-1 w-full max-w-6xl  ">
