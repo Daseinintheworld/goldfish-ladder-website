@@ -31,6 +31,42 @@ export default function InternshipPage() {
         "Finomic is a youth-led organization specializing in increasing financial literacy among the youth.",
       image: "/internship/fin.avif",
     },
+    {
+      title: "EconUnited",
+      description:
+        "EconUnited helps high school students worldwide learn about economics, finance, and business...",
+      image: "/internship/eco.avif",
+    },
+    {
+      title: "Cognify Wealth",
+      description:
+        "Cognify Wealth is an international nonprofit focused on bringing financial literacy to neurodivergent individuals...",
+      image: "/internship/cog.avif",
+    },
+    {
+      title: "Humara Pundit",
+      description:
+        "Humara Pandit is a Bengaluru-based faith-tech startup that offers a range of services including booking pandits...",
+      image: "/internship/ham.avif",
+    },
+    {
+      title: "TEEMEUP",
+      description:
+        "Teemeup is a student-led custom T-shirt brand that blends creativity, youth-driven design, and quality apparel...",
+      image: "/internship/tec.avif",
+    },
+    {
+      title: "Women Up",
+      description:
+        "WomenUp is dedicated to supporting and empowering women in business. They aim to build a strong community...",
+      image: "/internship/wom.avif",
+    },
+    {
+      title: "Pinkface",
+      description:
+        "Pinkface is a youth-led organisation focused on teenage mental health...",
+      image: "/internship/tee.avif",
+    },
   ];
 
   return (
