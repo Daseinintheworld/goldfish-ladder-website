@@ -8,60 +8,70 @@ import Link from "next/link";
 export default function InternshipPage() {
   const internships = [
     {
+      id: 1,
       title: "Wave",
       description:
         "Wave is a mental health tech startup dedicated to making emotional well-being more accessible through personalised, AI-driven support tools.",
       image: "/internship/wave.avif",
     },
     {
+      id: 2,
       title: "Project Clay",
       description:
         "Project Clay is a mentorship platform that connects high school students with near-peer mentors.",
       image: "/internship/project-clay.png",
     },
     {
+      id: 3,
       title: "Junior Economics Club",
       description:
         "The Junior Economic Club (JEC) is a student-led organisation dedicated to expanding high school students’ knowledge of economics.",
       image: "/internship/je.avif",
     },
     {
+      id: 4,
       title: "Finomic",
       description:
         "Finomic is a youth-led organization specializing in increasing financial literacy among the youth.",
       image: "/internship/fin.avif",
     },
     {
+      id: 5,
       title: "EconUnited",
       description:
         "EconUnited helps high school students worldwide learn about economics, finance, and business...",
       image: "/internship/eco.avif",
     },
     {
+      id: 6,
       title: "Cognify Wealth",
       description:
         "Cognify Wealth is an international nonprofit focused on bringing financial literacy to neurodivergent individuals...",
       image: "/internship/cog.avif",
     },
     {
+      id: 7,
       title: "Humara Pundit",
       description:
         "Humara Pandit is a Bengaluru-based faith-tech startup that offers a range of services including booking pandits...",
       image: "/internship/ham.avif",
     },
     {
+      id: 8,
       title: "TEEMEUP",
       description:
         "Teemeup is a student-led custom T-shirt brand that blends creativity, youth-driven design, and quality apparel...",
       image: "/internship/tec.avif",
     },
     {
+      id: 9,
       title: "Women Up",
       description:
         "WomenUp is dedicated to supporting and empowering women in business. They aim to build a strong community...",
       image: "/internship/wom.avif",
     },
     {
+      id: 10,
       title: "Pinkface",
       description:
         "Pinkface is a youth-led organisation focused on teenage mental health...",
@@ -122,13 +132,13 @@ export default function InternshipPage() {
         >
           {/* Internship Cards */}
           <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
-            {internships.map(({ title, description, image }, i) => (
+            {internships.map(({ id, title, description, image }) => (
               <motion.div
-                key={i}
+                key={id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8, delay: i * 0.2 }}
+                transition={{ duration: 0.8 }}
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="bg-white flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-16 py-8 md:py-12 rounded-none rounded-b-xl border-b-[15px] border-b-[#b17e11] text-black">
