@@ -1,7 +1,7 @@
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
 import Internships from "./components/Internships";
-import Events from "./components/Events";
+import Resources from "./components/Resources";
 import Cofounder from "./components/Cofounder";
 
 export default function Home() {
@@ -14,9 +14,6 @@ export default function Home() {
 
       {/* Internship Section */}
       <Internships />
-
-      {/* Events Section */}
-      <Events />
 
       {/* AI Co-Founder Section */}
       <Cofounder />

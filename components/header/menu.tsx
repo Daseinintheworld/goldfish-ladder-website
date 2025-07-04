@@ -16,9 +16,8 @@ const Menu = async () => {
   const navLinks = [
     { name: "About", href: "/about" },
     { name: "Internships", href: "/internship" },
-    { name: "Events", href: "/events" },
-    { name: "Podcasts", href: "/podcast" },
     { name: "AI Cofounder", href: "/ai-co-founder" },
+    { name: "Resources", href: "/resources"}
   ];
 
   return (

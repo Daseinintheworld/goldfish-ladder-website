@@ -9,26 +9,20 @@ export default function AboutPage() {
     {
       id: 1,
       img: "/placeholder-img.png",
-      name: "Our Team",
-      designation: "lorem ipsum lorem ipsum",
-    },
-    {
-      id: 2,
-      img: "/placeholder-img.png",
-      name: "Devarash Bajoria",
+      name: "Devarsh Bajoria",
       designation: "Founder",
     },
     {
-      id: 3,
+      id: 2,
       img: "/placeholder-img.png",
       name: "Jatin Jain",
       designation: "Head of the operation",
     },
     {
-      id: 4,
+      id: 3,
       img: "/placeholder-img.png",
-      name: "Our Team",
-      designation: "lorem ipsum lorem ipsum",
+      name: "Huma Abia Kanta",
+      designation: "Collaborating through KindCodeWorks",
     },
   ];
 
