@@ -1,7 +1,7 @@
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
 import Internships from "./components/Internships";
-import Resources from "./components/Resources";
+import Resources from "./components/resources/page.html";
 import Cofounder from "./components/Cofounder";
 
 export default function Home() {
