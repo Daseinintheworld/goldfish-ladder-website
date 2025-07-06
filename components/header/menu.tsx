@@ -17,7 +17,7 @@ const Menu = async () => {
     { name: "About", href: "/about" },
     { name: "Internships", href: "/internship" },
     { name: "AI Cofounder", href: "/ai-co-founder" },
-    { name: "Resources", href: "/resources"}
+    { name: "Resources", href: ".public/resources.html"}
   ];
 
   return (
