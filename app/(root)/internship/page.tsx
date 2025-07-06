@@ -126,9 +126,9 @@ export default function InternshipPage() {
         <motion.div
           className="container mx-auto bg-primaryTextColor px-6 md:px-10 py-20  text-black rounded-3xl"
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           {/* Internship Cards */}
           <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
@@ -136,9 +136,9 @@ export default function InternshipPage() {
               <motion.div
                 key={id}
                 initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="bg-white flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-16 py-8 md:py-12 rounded-none rounded-b-xl border-b-[15px] border-b-[#b17e11] text-black">
