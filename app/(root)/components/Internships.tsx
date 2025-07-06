@@ -88,7 +88,7 @@ const Internships = () => {
     <motion.section
       className="max-w-5xl mx-auto mt-32 md:mt-72 w-full flex flex-col justify-center items-center"
       initial="hidden"
-      whileInView="visible"
+      animate="visible"
       viewport={{ once: true, amount: 0.1 }}
       variants={containerVariants}
     >
