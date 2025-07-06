@@ -22,7 +22,7 @@ export default function AboutPage() {
       id: 3,
       img: "/placeholder-img.png",
       name: "Huma Abia Kanta",
-      designation: "Collaborating through KindCodeWorks",
+      designation: "Collaborating via KindCodeWorks",
     },
   ];
 
