@@ -21,9 +21,27 @@ export default function AboutPage() {
     {
       id: 3,
       img: "/placeholder-img.png",
+      name: "Isha Goel",
+      designation: "Financial Head"
+    },
+    {
+      id: 4,
+      img: "/placeholder-img.png",
       name: "Huma Abia Kanta",
       designation: "Collaborating via KindCodeWorks",
     },
+    {
+      id: 5,
+      img = "/placeholder-img.png",
+      name: "Bhumik Narayani",
+      designation: "Chief Operating Officer"
+    },
+    {
+      id: 6,
+      img = "'placeholder-img.png",
+      name: "Lakshya Vijaywargia",
+      designation: "Managing Director"
+    }
   ];
 
   return (
