@@ -32,13 +32,13 @@ export default function AboutPage() {
     },
     {
       id: 5,
-      img = "/placeholder-img.png",
+      img: "/placeholder-img.png",
       name: "Bhumik Narayani",
       designation: "Chief Operating Officer"
     },
     {
       id: 6,
-      img = "'placeholder-img.png",
+      img: "'placeholder-img.png",
       name: "Lakshya Vijaywargia",
       designation: "Managing Director"
     }
