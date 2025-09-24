@@ -4,10 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primaryColor: #ffb32c;
-  --color-primaryTextColor: #fdba3c;
+  --color-primaryColor: #e6c775;   /* Soft Gold */
+  --color-primaryTextColor: #f4e3a0; /* Soft Yellow */
 }
 
+/* === Fonts === */
 .font-bebas {
   font-family: "Bebas Neue", cursive;
 }
@@ -18,22 +19,24 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* === Chat Container === */
 .chat-container {
   @apply bg-primary rounded-2xl shadow-2xl p-0 flex flex-col h-[80vh];
 }
 
 .chat-header {
-  @apply p-5 border-b border-[#f9c45a] bg-primary rounded-t-2xl;
+  @apply p-5 border-b border-[#f4e3a0] bg-primary rounded-t-2xl;
 }
 
 .chat-messages {
-  @apply flex-1 p-6 overflow-y-auto bg-[#f9c45a];
+  @apply flex-1 p-6 overflow-y-auto bg-[#f4e3a0];
 }
 
 .chat-input-area {
-  @apply border-t border-[#f9c45a] px-5 py-4 bg-primary rounded-b-2xl;
+  @apply border-t border-[#f4e3a0] px-5 py-4 bg-primary rounded-b-2xl;
 }
 
+/* === Messages === */
 .message-row {
   @apply flex items-end mb-4;
 }
@@ -43,15 +46,17 @@
 }
 
 .avatar {
-  @apply w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-lg mr-3 text-white;
+  @apply w-10 h-10 rounded-full bg-primary flex items-center justify-center 
+         font-bold text-lg mr-3 text-white;
 }
 
 .message-bubble {
-  @apply max-w-[70%] px-4 py-3 rounded-[18px] text-[1.1em] leading-[1.5] text-white break-words;
+  @apply max-w-[70%] px-4 py-3 rounded-[18px] text-[1.1em] leading-[1.5] 
+         text-white break-words;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   filter: blur(0);
-  background: #ffb22cec;
+  background: #e6c775e6; /* soft gold with transparency */
   font-weight: 500;
   color: white;
 }
@@ -61,7 +66,7 @@
 }
 
 .message-row.user .avatar {
-  @apply bg-[#e09e25] text-white;
+  @apply bg-[#a3835f] text-white; /* soft brown */
 }
 
 .message-row.assistant .avatar {
@@ -72,65 +77,204 @@
   @apply text-black;
 }
 
+/* === Selection === */
 ::selection {
-  background: #ffb32c;
+  background: #e6c775; /* soft gold */
   color: white;
 }
 
+/* === Form Controls === */
 .form-control {
-  @apply bg-[#f9c45a] text-black border border-primary focus:outline-none p-4;
+  @apply bg-[#f4e3a0] text-black border border-primary focus:outline-none p-4;
 }
 
+/* === Buttons === */
 .btn-primary {
-  @apply bg-[#f9c45a] border-none text-white p-4;
+  @apply bg-[#f4e3a0] border-none text-white p-4;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  @apply bg-[#e09e25];
+  @apply bg-[#a3835f]; /* soft brown hover */
 }
 
-/* === Modern Animations === */
-
-/* Fade up (used for smooth entrance of sections) */
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* === Animations === */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Zoom-in (good for modals, bubbles, cards) */
-@keyframes zoom-in {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Pulse (gentle attention animation for buttons/icons) */
-@keyframes pulse-soft {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.9; }
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
 }
 
-/* Shine (premium effect for text/buttons) */
-@keyframes shine {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+.animate-slide-up {
+  animation: slide-up 0.5s ease-in-out;
 }
 
-/* === Animation Utility Classes === */
-.animate-fade-up { animation: fade-up 0.6s ease-out forwards; }
-.animate-zoom-in { animation: zoom-in 0.5s ease-out forwards; }
-.animate-pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
 
-/* Optional: Shine effect for special buttons/text */
-.btn-shine {
-  background: linear-gradient(
-    110deg,
-    #ffb32c 40%,  /* original gold */
-    #fff8e1 50%,  /* soft highlight */
-    #ffb32c 60%
-  );
-  background-size: 200% auto;
-  animation: shine 2s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* === Theme Variables === */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* === Light Theme === */
+:root {
+  --radius: 0.625rem;
+
+  /* Backgrounds */
+  --background: oklch(0.98 0.02 95); /* warm off-white / cream */
+  --foreground: oklch(0.20 0.05 60); /* soft dark brown */
+
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+
+  /* Palette */
+  --primary: oklch(0.82 0.12 90); /* Soft Gold */
+  --primary-foreground: var(--foreground);
+
+  --secondary: oklch(0.90 0.08 100); /* Soft Yellow */
+  --secondary-foreground: oklch(0.25 0.05 60);
+
+  --accent: oklch(0.65 0.08 60); /* Soft Brown */
+  --accent-foreground: var(--background);
+
+  /* Support */
+  --muted: oklch(0.94 0.02 95);
+  --muted-foreground: oklch(0.40 0.03 60);
+
+  --destructive: oklch(0.60 0.15 25);
+  --border: oklch(0.90 0.02 95);
+  --input: oklch(0.90 0.02 95);
+  --ring: oklch(0.75 0.05 95);
+
+  --chart-1: oklch(0.82 0.12 90);
+  --chart-2: oklch(0.65 0.08 60);
+  --chart-3: oklch(0.72 0.10 95);
+  --chart-4: oklch(0.88 0.07 100);
+  --chart-5: oklch(0.78 0.09 80);
+
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+/* === Dark Theme === */
+.dark {
+  /* Backgrounds */
+  --background: oklch(0.18 0.04 60); /* deep muted brown */
+  --foreground: oklch(0.95 0.02 95); /* light cream text */
+
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+
+  /* Palette */
+  --primary: oklch(0.82 0.12 90); /* Soft Gold */
+  --primary-foreground: var(--background);
+
+  --secondary: oklch(0.88 0.08 100); /* Soft Yellow */
+  --secondary-foreground: var(--background);
+
+  --accent: oklch(0.50 0.07 60); /* Darker Soft Brown */
+  --accent-foreground: var(--foreground);
+
+  /* Support */
+  --muted: oklch(0.28 0.03 60);
+  --muted-foreground: oklch(0.75 0.04 95);
+
+  --destructive: oklch(0.55 0.15 25);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.60 0.04 95);
+
+  --chart-1: oklch(0.82 0.12 90);
+  --chart-2: oklch(0.65 0.08 60);
+  --chart-3: oklch(0.72 0.10 95);
+  --chart-4: oklch(0.88 0.07 100);
+  --chart-5: oklch(0.78 0.09 80);
+
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+/* === Base Layer === */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
