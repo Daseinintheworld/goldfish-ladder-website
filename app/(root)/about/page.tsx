@@ -15,29 +15,23 @@ export default function AboutPage() {
     {
       id: 2,
       img: "/placeholder-img.png",
-      name: "Jatin Jain",
-      designation: "Head of the operation",
-    },
-    {
-      id: 3,
-      img: "/placeholder-img.png",
       name: "Isha Goel",
       designation: "Financial Head"
     },
     {
-      id: 4,
+      id: 3,
       img: "/placeholder-img.png",
       name: "Huma Abia Kanta",
       designation: "Collaborating via KindCodeWorks",
     },
     {
-      id: 5,
+      id: 4,
       img: "/placeholder-img.png",
       name: "Bhumik Narayani",
       designation: "Chief Operating Officer"
     },
     {
-      id: 6,
+      id: 5,
       img: "'placeholder-img.png",
       name: "Lakshya Vijaywargia",
       designation: "Managing Director"
